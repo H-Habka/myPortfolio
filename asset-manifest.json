@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/myPortfolio/static/css/main.676581c9.css",
-    "main.js": "/myPortfolio/static/js/main.ef387f84.js",
+    "main.js": "/myPortfolio/static/js/main.111458bf.js",
     "static/media/Post.png": "/myPortfolio/static/media/Post.23969e9d5a25ee9b92f1.png",
     "static/media/aboutme.png": "/myPortfolio/static/media/aboutme.9827218abc0ac8b01759.png",
     "static/media/crown-clothing.png": "/myPortfolio/static/media/crown-clothing.412d806d2e6dcb8367bf.png",
@@ -16,10 +16,10 @@
     "static/media/advice-generator.png": "/myPortfolio/static/media/advice-generator.52ed2fd8bb32000c8fc8.png",
     "index.html": "/myPortfolio/index.html",
     "main.676581c9.css.map": "/myPortfolio/static/css/main.676581c9.css.map",
-    "main.ef387f84.js.map": "/myPortfolio/static/js/main.ef387f84.js.map"
+    "main.111458bf.js.map": "/myPortfolio/static/js/main.111458bf.js.map"
   },
   "entrypoints": [
     "static/css/main.676581c9.css",
-    "static/js/main.ef387f84.js"
+    "static/js/main.111458bf.js"
   ]
 }
