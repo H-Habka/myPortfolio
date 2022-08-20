@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/myPortfolio/static/css/main.676581c9.css",
+    "main.js": "/myPortfolio/static/js/main.ef387f84.js",
+    "static/media/Post.png": "/myPortfolio/static/media/Post.23969e9d5a25ee9b92f1.png",
+    "static/media/aboutme.png": "/myPortfolio/static/media/aboutme.9827218abc0ac8b01759.png",
+    "static/media/crown-clothing.png": "/myPortfolio/static/media/crown-clothing.412d806d2e6dcb8367bf.png",
+    "static/media/weather-App.png": "/myPortfolio/static/media/weather-App.4d0a1c627982b88a43c2.png",
+    "static/media/monster-rolodex.png": "/myPortfolio/static/media/monster-rolodex.2d6ed08ef13daf0d15c2.png",
+    "static/media/Product-preview-card.png": "/myPortfolio/static/media/Product-preview-card.41b769bfc5f61b9e7a6d.png",
+    "static/media/Interactive-card.png": "/myPortfolio/static/media/Interactive-card.0090d0325082304f66cc.png",
+    "static/media/portfolio.png": "/myPortfolio/static/media/portfolio.4f616b4165c7e3080ec2.png",
+    "static/media/rockPaperScissors.png": "/myPortfolio/static/media/rockPaperScissors.19ac75e4240cc21aabff.png",
+    "static/media/Expenses-chart.png": "/myPortfolio/static/media/Expenses-chart.30742cc33a7998648cdc.png",
+    "static/media/Tip-calculator-app.png": "/myPortfolio/static/media/Tip-calculator-app.45855d78e3bd1efec5ad.png",
+    "static/media/advice-generator.png": "/myPortfolio/static/media/advice-generator.52ed2fd8bb32000c8fc8.png",
+    "index.html": "/myPortfolio/index.html",
+    "main.676581c9.css.map": "/myPortfolio/static/css/main.676581c9.css.map",
+    "main.ef387f84.js.map": "/myPortfolio/static/js/main.ef387f84.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.676581c9.css",
+    "static/js/main.ef387f84.js"
+  ]
+}
