@@ -74,8 +74,8 @@ export const projects = [
     {
         id : 10,
         title : "portfolio",
-        liveDemo : "https://h-habka.github.io/prortfolio/",
-        github : "https://github.com/H-Habka/prortfolio",
+        liveDemo : "https://h-habka.github.io/myPortfolio/",
+        github : "https://github.com/H-Habka/myPortfolio",
         language : "React",
         image : "portfolio.png"
     },
