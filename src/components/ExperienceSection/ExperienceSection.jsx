@@ -13,7 +13,7 @@ const ExperienceSection = () => {
                 <div className="text-lg text-four">What Skills I Have</div>
                 <div className="text-3xl text-two">My Experience</div>
             </div>
-            <div className="flex flex-col md:flex-row gap-4 w-11/12 sm:w-8/12 mx-auto justify-between">
+            <div className="flex flex-col md:flex-row gap-8 w-11/12 sm:w-8/12 mx-auto justify-between md:gap-4">
                 <div
                     data-aos="fade-right"
                     data-aos-offset="100"

@@ -30,7 +30,7 @@ const HeaderSection = () => {
                     FrontEnd Developer
                 </p>
             </div>
-            <div className="flex flex-col md:flex-row justify-between items-center w-8/12 mx-auto md:gap-6">
+            <div className="flex flex-col md:flex-row justify-between items-center w-8/12 mx-auto md:gap-6 gap-4">
                 <div className="flex md:flex-col gap-4 text-five">
                     <a
                         data-aos="fade-right"
