@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/myPortfolio/static/css/main.8cd2d424.css",
-    "main.js": "/myPortfolio/static/js/main.681d07d7.js",
-    "static/media/Post.png": "/myPortfolio/static/media/Post.23969e9d5a25ee9b92f1.png",
-    "static/media/aboutme.png": "/myPortfolio/static/media/aboutme.9827218abc0ac8b01759.png",
-    "static/media/crown-clothing.png": "/myPortfolio/static/media/crown-clothing.412d806d2e6dcb8367bf.png",
-    "static/media/weather-App.png": "/myPortfolio/static/media/weather-App.4d0a1c627982b88a43c2.png",
-    "static/media/monster-rolodex.png": "/myPortfolio/static/media/monster-rolodex.2d6ed08ef13daf0d15c2.png",
-    "static/media/Product-preview-card.png": "/myPortfolio/static/media/Product-preview-card.41b769bfc5f61b9e7a6d.png",
-    "static/media/Interactive-card.png": "/myPortfolio/static/media/Interactive-card.0090d0325082304f66cc.png",
-    "static/media/portfolio.png": "/myPortfolio/static/media/portfolio.4f616b4165c7e3080ec2.png",
-    "static/media/rockPaperScissors.png": "/myPortfolio/static/media/rockPaperScissors.19ac75e4240cc21aabff.png",
-    "static/media/Expenses-chart.png": "/myPortfolio/static/media/Expenses-chart.30742cc33a7998648cdc.png",
-    "static/media/Tip-calculator-app.png": "/myPortfolio/static/media/Tip-calculator-app.45855d78e3bd1efec5ad.png",
-    "static/media/advice-generator.png": "/myPortfolio/static/media/advice-generator.52ed2fd8bb32000c8fc8.png",
-    "index.html": "/myPortfolio/index.html",
-    "main.8cd2d424.css.map": "/myPortfolio/static/css/main.8cd2d424.css.map",
-    "main.681d07d7.js.map": "/myPortfolio/static/js/main.681d07d7.js.map"
+    "main.css": "/static/css/main.8cd2d424.css",
+    "main.js": "/static/js/main.36102901.js",
+    "static/media/portfolio.webp": "/static/media/portfolio.b9ae5eeb580966468489.webp",
+    "static/media/crown-clothing.webp": "/static/media/crown-clothing.9683b92ff6215e8d260f.webp",
+    "static/media/Post.webp": "/static/media/Post.8f32cfc0129fdab99e0b.webp",
+    "static/media/aboutme.webp": "/static/media/aboutme.f1cf28f69e6e44511f91.webp",
+    "static/media/monster-rolodex.webp": "/static/media/monster-rolodex.b40f6e8ee706869825a4.webp",
+    "static/media/Product-preview-card.webp": "/static/media/Product-preview-card.81d51214b39e50b2c4c1.webp",
+    "static/media/weather-App.webp": "/static/media/weather-App.60758bc9c56aa1a37dff.webp",
+    "static/media/Interactive-card.webp": "/static/media/Interactive-card.b492619a9fcc6eb744fa.webp",
+    "static/media/rockPaperScissors.webp": "/static/media/rockPaperScissors.eebdb4ab6b74b58d887d.webp",
+    "static/media/Tip-calculator-app.webp": "/static/media/Tip-calculator-app.203fd0ed15f95f581f5e.webp",
+    "static/media/Expenses-chart.webp": "/static/media/Expenses-chart.a887b3806076bd97ee31.webp",
+    "static/media/advice-generator.webp": "/static/media/advice-generator.0e1edaaaa38a59be5987.webp",
+    "index.html": "/index.html",
+    "main.8cd2d424.css.map": "/static/css/main.8cd2d424.css.map",
+    "main.36102901.js.map": "/static/js/main.36102901.js.map"
   },
   "entrypoints": [
     "static/css/main.8cd2d424.css",
-    "static/js/main.681d07d7.js"
+    "static/js/main.36102901.js"
   ]
 }
