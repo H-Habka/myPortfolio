@@ -72,7 +72,7 @@ const HeaderSection = () => {
                     data-aos-delay="800"
                     className="w-[320px] rounded-t-full bg-gradient-to-b from-two to-transparent "
                 >
-                    <img src={require("../images/Post.png")} alt="profile" />
+                    <img src={require("../images/Post.webp")} alt="profile" />
                 </div>
                 <a data-aos="fade-down" data-aos-duration="500" data-aos-offset="-100" data-aos-delay="1000" href='#about' className="text-two animate-bounce hover:text-three cursor-pointer">
                     <FaHandPointDown size={40}  />

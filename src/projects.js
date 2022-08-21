@@ -5,7 +5,7 @@ export const projects = [
         liveDemo : "https://h-habka.github.io/crwn-clothing",
         github : "https://github.com/H-Habka/crwn-clothing",
         language : "React",
-        image : "crown-clothing.png"
+        image : "crown-clothing.webp"
     },
     {
         id : 2,
@@ -13,7 +13,7 @@ export const projects = [
         liveDemo : "https://h-habka.github.io/Product-preview-card-components/",
         github : "https://github.com/H-Habka/Product-preview-card-components",
         language : "HTML+CSS",
-        image : "Product-preview-card.png"
+        image : "Product-preview-card.webp"
     },
     {
         id : 7,
@@ -21,7 +21,7 @@ export const projects = [
         liveDemo : "https://h-habka.github.io/rockPaperScissors/",
         github : "https://github.com/H-Habka/rockPaperScissors",
         language : "React",
-        image : "rockPaperScissors.png"
+        image : "rockPaperScissors.webp"
     },
     {
         id : 3,
@@ -29,7 +29,7 @@ export const projects = [
         liveDemo : "https://h-habka.github.io/weather-App/",
         github : "https://github.com/H-Habka/weather-App",
         language : "React",
-        image : "weather-App.png"
+        image : "weather-App.webp"
     },
     {
         id : 5,
@@ -37,7 +37,7 @@ export const projects = [
         liveDemo : "https://h-habka.github.io/Interactive-card-details-form/",
         github : "https://github.com/H-Habka/Interactive-card-details-form",
         language : "React",
-        image : "Interactive-card.png"
+        image : "Interactive-card.webp"
     },
     {
         id : 4,
@@ -45,7 +45,7 @@ export const projects = [
         liveDemo : "https://h-habka.github.io/advice-generator-app/",
         github : "https://github.com/H-Habka/advice-generator-app",
         language : "HTML+CSS",
-        image : "advice-generator.png"
+        image : "advice-generator.webp"
     },
     {
         id : 6,
@@ -53,7 +53,7 @@ export const projects = [
         liveDemo : "https://h-habka.github.io/monster-rolodex/",
         github : "https://github.com/H-Habka/monster-rolodex",
         language : "React",
-        image : "monster-rolodex.png"
+        image : "monster-rolodex.webp"
     },
     {
         id : 8,
@@ -61,7 +61,7 @@ export const projects = [
         liveDemo : "https://h-habka.github.io/Tip-calculator-app/",
         github : "https://github.com/H-Habka/Tip-calculator-app",
         language : "React",
-        image : "Tip-calculator-app.png"
+        image : "Tip-calculator-app.webp"
     },
     {
         id : 9,
@@ -69,7 +69,7 @@ export const projects = [
         liveDemo : "https://h-habka.github.io/Expenses-chart-component/",
         github : "https://github.com/H-Habka/Expenses-chart-component",
         language : "HTML+CSS",
-        image : "Expenses-chart.png"
+        image : "Expenses-chart.webp"
     },
     {
         id : 10,
@@ -77,7 +77,7 @@ export const projects = [
         liveDemo : "https://h-habka.github.io/myPortfolio/",
         github : "https://github.com/H-Habka/myPortfolio",
         language : "React",
-        image : "portfolio.png"
+        image : "portfolio.webp"
     },
     
 ]

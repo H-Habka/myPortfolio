@@ -25,7 +25,7 @@ const AboutMeSection = () => {
                 >
                     <div className="rounded-3xl  -z-10 w-60 h-[320px] absolute bg-gradient-to-tr from-transparent to-transparent via-two"></div>
                     <img
-                        src={require("../images/aboutme.png")}
+                        src={require("../images/aboutme.webp")}
                         alt="asd"
                         className=" w-60 -rotate-12 hover:rotate-0 duration-500 ease-in-out  rounded-3xl h-[320px] bg-gradient-to-br from-transparent to-transparent via-two"
                     />
