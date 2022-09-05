@@ -1,14 +1,15 @@
 {
   "files": {
     "main.css": "/myPortfolio/static/css/main.8cd2d424.css",
-    "main.js": "/myPortfolio/static/js/main.7898e6dd.js",
-    "static/media/gymWebSite.webp": "/myPortfolio/static/media/gymWebSite.b669a32528b7bf7fce3c.webp",
+    "main.js": "/myPortfolio/static/js/main.a61e524d.js",
     "static/media/portfolio.webp": "/myPortfolio/static/media/portfolio.b9ae5eeb580966468489.webp",
+    "static/media/youtubeClone.webp": "/myPortfolio/static/media/youtubeClone.090ba99c60da0cc9ddf7.webp",
     "static/media/crown-clothing.webp": "/myPortfolio/static/media/crown-clothing.9683b92ff6215e8d260f.webp",
     "static/media/Post.webp": "/myPortfolio/static/media/Post.8f32cfc0129fdab99e0b.webp",
     "static/media/aboutme.webp": "/myPortfolio/static/media/aboutme.f1cf28f69e6e44511f91.webp",
     "static/media/monster-rolodex.webp": "/myPortfolio/static/media/monster-rolodex.b40f6e8ee706869825a4.webp",
     "static/media/Product-preview-card.webp": "/myPortfolio/static/media/Product-preview-card.81d51214b39e50b2c4c1.webp",
+    "static/media/gymWebSite.webp": "/myPortfolio/static/media/gymWebSite.dd69c3f74ef3530205cc.webp",
     "static/media/weather-App.webp": "/myPortfolio/static/media/weather-App.60758bc9c56aa1a37dff.webp",
     "static/media/Interactive-card.webp": "/myPortfolio/static/media/Interactive-card.b492619a9fcc6eb744fa.webp",
     "static/media/rockPaperScissors.webp": "/myPortfolio/static/media/rockPaperScissors.eebdb4ab6b74b58d887d.webp",
@@ -17,10 +18,10 @@
     "static/media/advice-generator.webp": "/myPortfolio/static/media/advice-generator.0e1edaaaa38a59be5987.webp",
     "index.html": "/myPortfolio/index.html",
     "main.8cd2d424.css.map": "/myPortfolio/static/css/main.8cd2d424.css.map",
-    "main.7898e6dd.js.map": "/myPortfolio/static/js/main.7898e6dd.js.map"
+    "main.a61e524d.js.map": "/myPortfolio/static/js/main.a61e524d.js.map"
   },
   "entrypoints": [
     "static/css/main.8cd2d424.css",
-    "static/js/main.7898e6dd.js"
+    "static/js/main.a61e524d.js"
   ]
 }
