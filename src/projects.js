@@ -9,6 +9,14 @@ export const projects = [
     },
     {
         id : 2,
+        title : "youtube Clone",
+        liveDemo : "https://h-habka.github.io/youtubeClone",
+        github : "https://github.com/H-Habka/youtubeClone",
+        language : "React",
+        image : "youtubeClone.webp"
+    },
+    {
+        id : 3,
         title : "crwn-clothing",
         liveDemo : "https://h-habka.github.io/crwn-clothing",
         github : "https://github.com/H-Habka/crwn-clothing",
@@ -16,7 +24,7 @@ export const projects = [
         image : "crown-clothing.webp"
     },
     {
-        id : 3,
+        id : 4,
         title : "Product-preview-card",
         liveDemo : "https://h-habka.github.io/Product-preview-card-components/",
         github : "https://github.com/H-Habka/Product-preview-card-components",
@@ -24,7 +32,7 @@ export const projects = [
         image : "Product-preview-card.webp"
     },
     {
-        id : 4,
+        id : 5,
         title : "rockPaperScissors",
         liveDemo : "https://h-habka.github.io/rockPaperScissors/",
         github : "https://github.com/H-Habka/rockPaperScissors",
@@ -32,7 +40,7 @@ export const projects = [
         image : "rockPaperScissors.webp"
     },
     {
-        id : 5,
+        id : 6,
         title : "weather-App",
         liveDemo : "https://h-habka.github.io/weather-App/",
         github : "https://github.com/H-Habka/weather-App",
@@ -40,7 +48,7 @@ export const projects = [
         image : "weather-App.webp"
     },
     {
-        id : 6,
+        id : 7,
         title : "Interactive-card",
         liveDemo : "https://h-habka.github.io/Interactive-card-details-form/",
         github : "https://github.com/H-Habka/Interactive-card-details-form",
@@ -48,7 +56,7 @@ export const projects = [
         image : "Interactive-card.webp"
     },
     {
-        id : 7,
+        id : 8,
         title : "advice-generator",
         liveDemo : "https://h-habka.github.io/advice-generator-app/",
         github : "https://github.com/H-Habka/advice-generator-app",
@@ -56,7 +64,7 @@ export const projects = [
         image : "advice-generator.webp"
     },
     {
-        id : 8,
+        id : 9,
         title : "monster-rolodex",
         liveDemo : "https://h-habka.github.io/monster-rolodex/",
         github : "https://github.com/H-Habka/monster-rolodex",
@@ -64,7 +72,7 @@ export const projects = [
         image : "monster-rolodex.webp"
     },
     {
-        id : 9,
+        id : 10,
         title : "Tip-calculator-app",
         liveDemo : "https://h-habka.github.io/Tip-calculator-app/",
         github : "https://github.com/H-Habka/Tip-calculator-app",
@@ -72,7 +80,7 @@ export const projects = [
         image : "Tip-calculator-app.webp"
     },
     {
-        id : 10,
+        id : 11,
         title : "Expenses-chart",
         liveDemo : "https://h-habka.github.io/Expenses-chart-component/",
         github : "https://github.com/H-Habka/Expenses-chart-component",
@@ -80,7 +88,7 @@ export const projects = [
         image : "Expenses-chart.webp"
     },
     {
-        id : 11,
+        id : 12,
         title : "portfolio",
         liveDemo : "https://h-habka.github.io/myPortfolio/",
         github : "https://github.com/H-Habka/myPortfolio",
