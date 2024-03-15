@@ -1,18 +1,22 @@
 export const FrontEndExperinces = [
     {
-        progress: 95,
+        progress: 99,
         title: "JavaScript",
     },
     {
-        progress: 92,
+        progress: 99,
         title: "React",
     },
     {
-        progress: 92,
+        progress: 95,
         title: "Redux",
     },
     {
-        progress: 92,
+        progress: 90,
+        title: "Next",
+    },
+    {
+        progress: 99,
         title: "html",
     },
     {
@@ -20,25 +24,37 @@ export const FrontEndExperinces = [
         title: "Postman",
     },
     {
-        progress: 80,
+        progress: 90,
         title: "SCSS",
     },
     {
-        progress: 92,
-        title: "Tailwind",
+        progress: 97,
+        title: "TailwindCSS",
     },
     {
-        progress: 85,
+        progress: 80,
         title: "RTK",
     },
     {
-        progress: 75,
+        progress: 80,
         title: "Framer Motion",
     },
 
     {
-        progress: 85,
+        progress: 95,
         title: "Git",
+    },
+    {
+        progress: 90,
+        title: "Zustand",
+    },
+    {
+        progress: 95,
+        title: "React Query",
+    },
+    {
+        progress: 90,
+        title: "React Hook Form",
     },
 ];
 

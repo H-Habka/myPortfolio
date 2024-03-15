@@ -31,8 +31,8 @@ const ContactSection = () => {
                         <ImWhatsapp size={24} />
                     </div>
                     <div>Whatsapp</div>
-                    <div className="text-one group-hover:text-three">+963935133257</div>
-                    <a target="_blank" href="https://api.whatsapp.com/send?phone=%2b963935133257" className="text-lg font-bold text-four cursor-pointer hover:scale-125 hover:text-white" >Send Message</a>
+                    <div className="text-one group-hover:text-three">+971588930130</div>
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=%2b971588930130" className="text-lg font-bold text-four cursor-pointer hover:scale-125 hover:text-white" >Send Message</a>
                 </div>
             </div>
             <form

@@ -38,7 +38,7 @@ const AboutMeSection = () => {
                 <FaMedal className="text-xl md:text-3xl" />
               </div>
               <div>Experince</div>
-              <div>+2 year</div>
+              <div>+3 year</div>
             </div>
             <div
               data-aos="zoom-in"
@@ -62,7 +62,7 @@ const AboutMeSection = () => {
                 <AiOutlineProject className="text-xl md:text-3xl" />
               </div>
               <div>Projetcs</div>
-              <div>+30 Completed</div>
+              <div>+40 Completed</div>
             </div>
           </div>
           <div

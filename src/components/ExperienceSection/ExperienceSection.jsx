@@ -20,7 +20,7 @@ const ExperienceSection = () => {
                     className="group hover:bg-transparent  rounded-xl flex-1 bg-two flex flex-col items-center py-6 gap-6 border-2 border-two"
                 >
                     <p className="text-center text-2xl text-five group-hover:text-white">
-                        FrontEnd Developer
+                        FrontEnd Development
                     </p>
                     <div className="grid gap-2 grid-cols-2 ">
                         {FrontEndExperinces.map((item) => (
@@ -34,7 +34,7 @@ const ExperienceSection = () => {
                     className="group hover:bg-transparent  rounded-xl flex-1 bg-two flex flex-col items-center py-6 gap-6 border-2 border-two "
                 >
                     <p className="text-center text-2xl text-five group-hover:text-white">
-                        Backend Developer
+                        Backend Development
                     </p>
                     <div className="grid gap-2 grid-cols-2 ">
                         {BackEndExperinces.map((item) => (
