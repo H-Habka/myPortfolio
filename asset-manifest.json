@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/myPortfolio/static/css/main.fb3ec476.css",
-    "main.js": "/myPortfolio/static/js/main.7e0a70ce.js",
+    "main.css": "/myPortfolio/static/css/main.b7837ab3.css",
+    "main.js": "/myPortfolio/static/js/main.0627450d.js",
     "static/media/portfolio.webp": "/myPortfolio/static/media/portfolio.b9ae5eeb580966468489.webp",
     "static/media/youtubeClone.webp": "/myPortfolio/static/media/youtubeClone.090ba99c60da0cc9ddf7.webp",
     "static/media/crown-clothing.webp": "/myPortfolio/static/media/crown-clothing.9683b92ff6215e8d260f.webp",
@@ -17,11 +17,11 @@
     "static/media/Expenses-chart.webp": "/myPortfolio/static/media/Expenses-chart.a887b3806076bd97ee31.webp",
     "static/media/advice-generator.webp": "/myPortfolio/static/media/advice-generator.0e1edaaaa38a59be5987.webp",
     "index.html": "/myPortfolio/index.html",
-    "main.fb3ec476.css.map": "/myPortfolio/static/css/main.fb3ec476.css.map",
-    "main.7e0a70ce.js.map": "/myPortfolio/static/js/main.7e0a70ce.js.map"
+    "main.b7837ab3.css.map": "/myPortfolio/static/css/main.b7837ab3.css.map",
+    "main.0627450d.js.map": "/myPortfolio/static/js/main.0627450d.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb3ec476.css",
-    "static/js/main.7e0a70ce.js"
+    "static/css/main.b7837ab3.css",
+    "static/js/main.0627450d.js"
   ]
 }
