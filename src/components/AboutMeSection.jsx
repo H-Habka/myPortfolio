@@ -38,7 +38,7 @@ const AboutMeSection = () => {
                 <FaMedal className="text-xl md:text-3xl" />
               </div>
               <div>Experince</div>
-              <div>+3 year</div>
+              <div>+4 year</div>
             </div>
             <div
               data-aos="zoom-in"
