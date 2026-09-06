@@ -1,84 +1,97 @@
 import React from "react";
 import { BsGithub, BsLinkedin, BsFacebook } from "react-icons/bs";
 import { FaHandPointDown } from "react-icons/fa";
+
 const HeaderSection = () => {
     return (
-        <div
+        <section
             id="home"
-            className="flex flex-col gap-4 items-center lg:h-screen w-screen justify-between md:pt-20 pt-10"
+            className="relative flex min-h-screen w-full items-center px-5 sm:px-8 pt-16 pb-28"
         >
-            <div className="flex flex-col gap-2 text-white text-center">
-                <p
-                    data-aos="fade-down"
-                    data-aos-delay="400"
-                    className="text-xl"
-                >
-                    Hello I'm
-                </p>
-                <p
-                    data-aos="fade-down"
-                    data-aos-delay="600"
-                    className="text-4xl text-two"
-                >
-                    Hossien Habka
-                </p>
-                <p
-                    data-aos="fade-down"
-                    data-aos-delay="800"
-                    className="text-five text-lg"
-                >
-                    FrontEnd Developer
-                </p>
-            </div>
-            <div className="flex flex-col md:flex-row justify-between items-center w-8/12 mx-auto md:gap-6 gap-4">
-                <div className="flex md:flex-col gap-4 text-five">
-                    <a
-                        data-aos="fade-right"
-                        data-aos-delay="400"
-                        data-aos-offset="-100"
-                        href="https://github.com/H-Habka"
-                        target="_blank"
+            <div className="section-inner grid items-center gap-12 md:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+                <div className="flex flex-col items-center text-center md:items-start md:text-left">
+                    <p
+                        data-aos="fade-up"
+                        data-aos-delay="80"
+                        className="section-kicker"
                     >
-                        <BsGithub size={30} className="hover:text-black" />
-                    </a>
-                    <a
-                        data-aos="fade-right"
-                        data-aos-delay="600"
-                        data-aos-offset="-100"
-                        href="https://www.linkedin.com/in/hossien-habka-b67069229/"
-                        target="_blank"
+                        Hello I'm
+                    </p>
+                    <h1
+                        data-aos="fade-up"
+                        data-aos-delay="180"
+                        className="font-display mt-3 text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl"
                     >
-                        <BsLinkedin
-                            size={30}
-                            className="hover:text-[#0077b5]"
-                        />
-                    </a>
-                    <a
-                        data-aos="fade-right"
-                        data-aos-delay="800"
-                        data-aos-offset="-100"
-                        href="https://www.facebook.com/profile.php?id=100021919424493"
-                        target="_blank"
+                        Hossien Habka
+                    </h1>
+                    <p
+                        data-aos="fade-up"
+                        data-aos-delay="280"
+                        className="mt-4 text-lg text-three sm:text-xl"
                     >
-                        <BsFacebook
-                            size={30}
-                            className="hover:text-[#4267B2]"
-                        />
-                    </a>
+                        FrontEnd Developer
+                    </p>
+                    <div className="mt-8 flex items-center gap-3">
+                        <a
+                            data-aos="fade-up"
+                            data-aos-delay="360"
+                            href="https://github.com/H-Habka"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="GitHub"
+                            className="icon-link"
+                        >
+                            <BsGithub size={20} />
+                        </a>
+                        <a
+                            data-aos="fade-up"
+                            data-aos-delay="440"
+                            href="https://www.linkedin.com/in/hossien-habka-b67069229/"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="LinkedIn"
+                            className="icon-link"
+                        >
+                            <BsLinkedin size={20} />
+                        </a>
+                        <a
+                            data-aos="fade-up"
+                            data-aos-delay="520"
+                            href="https://www.facebook.com/profile.php?id=100021919424493"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="Facebook"
+                            className="icon-link"
+                        >
+                            <BsFacebook size={20} />
+                        </a>
+                    </div>
                 </div>
                 <div
-                    data-aos="zoom-in-up"
-                    data-aos-offset="-100"
-                    data-aos-delay="800"
-                    className="w-[320px] rounded-t-full bg-gradient-to-b from-two to-transparent "
+                    data-aos="zoom-in"
+                    data-aos-delay="240"
+                    className="relative mx-auto w-[260px] sm:w-[300px] lg:w-[340px]"
                 >
-                    <img src={require("../images/Post.webp")} alt="profile" />
+                    <div className="absolute -inset-6 rounded-full bg-two/20 blur-3xl" />
+                    <div className="relative overflow-hidden rounded-t-full bg-gradient-to-b from-two/80 to-transparent shadow-glow">
+                        <img
+                            src={require("../images/Post.webp")}
+                            alt="profile"
+                            className="relative w-full"
+                        />
+                    </div>
                 </div>
-                <a data-aos="fade-down" data-aos-duration="500" data-aos-offset="-100" data-aos-delay="1000" href='#about' className="text-two animate-bounce hover:text-three cursor-pointer">
-                    <FaHandPointDown size={40}  />
-                </a>
             </div>
-        </div>
+            <a
+                data-aos="fade-down"
+                data-aos-delay="700"
+                href="#about"
+                className="absolute bottom-10 left-1/2 -translate-x-1/2 text-two transition duration-300 hover:text-three"
+                aria-label="Scroll to about"
+            >
+                <FaHandPointDown size={28} className="animate-bounce" />
+            </a>
+        </section>
     );
 };
 

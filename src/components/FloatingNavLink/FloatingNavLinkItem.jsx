@@ -1,10 +1,14 @@
 import React from "react";
 
-const FloatingNavLinkItem = ({href,icon}) => {
+const FloatingNavLinkItem = ({ href, icon, active }) => {
     return (
         <a
             href={href}
-            className="hover:bg-gray-100 text-four hover:text-two rounded-full p-1"
+            className={`rounded-full p-2.5 transition duration-300 ${
+                active
+                    ? "bg-two/25 text-four"
+                    : "text-muted hover:bg-white/10 hover:text-five"
+            }`}
         >
             {icon}
         </a>

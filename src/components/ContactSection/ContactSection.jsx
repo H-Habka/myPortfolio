@@ -3,77 +3,100 @@ import { GoMail } from "react-icons/go";
 import { RiMessengerLine } from "react-icons/ri";
 import { ImWhatsapp } from "react-icons/im";
 
+const channels = [
+    {
+        icon: GoMail,
+        label: "Email",
+        value: "hossien.habka1@gmail.com",
+        href: "mailto:hossien.habka1@gmail.com",
+    },
+    {
+        icon: RiMessengerLine,
+        label: "Messenger",
+        value: "in Facebook",
+        href: "http://m.me/100021919424493",
+    },
+    {
+        icon: ImWhatsapp,
+        label: "Whatsapp",
+        value: "+971588930130",
+        href: "https://api.whatsapp.com/send?phone=%2b971588930130",
+    },
+];
+
 const ContactSection = () => {
     return (
-        <div
-            id="Contact"
-            className="flex flex-col md:flex-row pb-32 mt-24 pt-8 w-10/12 mx-auto gap-4"
-        >
-            <div className="flex flex-col gap-4 px-4" style={{ flex: 1 / 3 }}>
-                <div data-aos="fade-right" className="bg-two rounded-xl p-4 text-five flex items-center text-center flex-col gap-2 group hover:bg-transparent border-2 border-two">
-                    <div>
-                        <GoMail size={24} />
-                    </div>
-                    <div>Email</div>
-                    <div className="text-one group-hover:text-three">hossien.habka1@gmail.com</div>
-                    <a target="_blank" href="mailto:hossien.habka1@gmail.com" className="text-lg font-bold text-four cursor-pointer hover:scale-125 hover:text-white" >Send Message</a>
+        <section id="Contact" className="section-wrap pb-36">
+            <div className="section-inner grid gap-8 md:grid-cols-[0.9fr_1.4fr] md:gap-10">
+                <div className="flex flex-col gap-4">
+                    {channels.map((channel) => {
+                        const Icon = channel.icon;
+                        return (
+                            <div
+                                key={channel.label}
+                                data-aos="fade-up"
+                                className="surface-card flex flex-col items-center gap-2 px-4 py-6 text-center transition duration-300 hover:border-three/40"
+                            >
+                                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-two/15 text-three">
+                                    <Icon size={20} />
+                                </div>
+                                <div className="font-semibold text-five">
+                                    {channel.label}
+                                </div>
+                                <div className="text-sm text-muted">
+                                    {channel.value}
+                                </div>
+                                <a
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    href={channel.href}
+                                    className="text-sm font-semibold text-four transition duration-300 hover:text-three"
+                                >
+                                    Send Message
+                                </a>
+                            </div>
+                        );
+                    })}
                 </div>
-                <div data-aos="fade-right" className="bg-two rounded-xl p-4 text-five flex items-center text-center flex-col gap-2 group hover:bg-transparent border-2 border-two">
-                    <div>
-                        <RiMessengerLine size={24} />
-                    </div>
-                    <div>Messenger</div>
-                    <div className="text-one group-hover:text-three">in Facebook</div>
-                    <a target="_blank" href="http://m.me/100021919424493" className="text-lg font-bold text-four cursor-pointer hover:scale-125 hover:text-white" >Send Message</a>
-                </div>
-                <div data-aos="fade-right" className="bg-two rounded-xl p-4 text-five flex items-center text-center flex-col gap-2 group hover:bg-transparent border-2 border-two">
-                    <div>
-                        <ImWhatsapp size={24} />
-                    </div>
-                    <div>Whatsapp</div>
-                    <div className="text-one group-hover:text-three">+971588930130</div>
-                    <a target="_blank" href="https://api.whatsapp.com/send?phone=%2b971588930130" className="text-lg font-bold text-four cursor-pointer hover:scale-125 hover:text-white" >Send Message</a>
-                </div>
-            </div>
-            <form
-                style={{ flex: 2 / 3 }}
-                className="flex flex-col gap-4 px-4  md:px-8"
-                onSubmit={(e) => {
-                    e.preventDefault() 
-                    alert("sorry try again later !!")
-                }}
-            >
-                <input
-                data-aos="fade-left"
-                required
-                className="p-4 bg-transparent rounded-xl text-four outline-none border-two focus:border-white border-2 text-lg md:text-xl font-semibold"
-                type="text"
-                placeholder="Your Full Name"
-                />
-                <input
-                data-aos="fade-left"
-                required
-                className="p-4 bg-transparent rounded-xl text-four outline-none border-two focus:border-white border-2 text-lg md:text-xl font-semibold"
-                type="text"
-                placeholder="Your Email"
-                />
-                <textarea
-                data-aos="fade-left"
-                required
-                className="p-4 bg-transparent rounded-xl text-four outline-none border-two focus:border-white border-2 text-lg md:text-xl font-semibold"
-                cols="30"
-                rows="10"
-                placeholder="Your Message"
-                ></textarea>
-                <button
-                    data-aos="fade-left"
-                    type="submit"
-                    className="bg-three px-4 py-2 rounded-xl w-fit hover:bg-two hove:text-three"
+                <form
+                    className="flex flex-col gap-4"
+                    onSubmit={(e) => {
+                        e.preventDefault();
+                        alert("sorry try again later !!");
+                    }}
                 >
-                    Submit
-                </button>
-            </form>
-        </div>
+                    <input
+                        data-aos="fade-up"
+                        required
+                        className="field-input"
+                        type="text"
+                        placeholder="Your Full Name"
+                    />
+                    <input
+                        data-aos="fade-up"
+                        required
+                        className="field-input"
+                        type="email"
+                        placeholder="Your Email"
+                    />
+                    <textarea
+                        data-aos="fade-up"
+                        required
+                        className="field-input min-h-[220px] resize-y"
+                        cols="30"
+                        rows="10"
+                        placeholder="Your Message"
+                    ></textarea>
+                    <button
+                        data-aos="fade-up"
+                        type="submit"
+                        className="btn-primary w-fit"
+                    >
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </section>
     );
 };
 

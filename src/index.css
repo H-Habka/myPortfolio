@@ -1,27 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap");
 
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    letter-spacing: 1px;
     margin: 0;
-    font-family: Oswald, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-        "Helvetica Neue", sans-serif;
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI",
+        sans-serif;
+    color: #eef4ec;
+    background-color: #0c100e;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
-    display: none;
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0c100e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2a382c;
+    border-radius: 999px;
 }
 
 code {
@@ -31,5 +39,50 @@ code {
 
 * {
     box-sizing: border-box;
-    /* border: 2px solid red; */
+}
+
+@layer components {
+    .section-wrap {
+        @apply relative w-full px-5 sm:px-8 py-20 md:py-28;
+    }
+
+    .section-inner {
+        @apply mx-auto w-full max-w-content;
+    }
+
+    .section-kicker {
+        @apply font-medium text-xs sm:text-sm uppercase tracking-[0.22em] text-four/80;
+    }
+
+    .section-title {
+        @apply font-display text-3xl sm:text-4xl font-semibold tracking-tight text-five;
+    }
+
+    .section-heading {
+        @apply flex flex-col items-center text-center gap-2;
+    }
+
+    .section-rule {
+        @apply mt-1 h-px w-12 bg-gradient-to-r from-transparent via-three to-transparent;
+    }
+
+    .surface-card {
+        @apply rounded-2xl border border-white/10 bg-surface/80 shadow-card backdrop-blur-sm;
+    }
+
+    .btn-primary {
+        @apply inline-flex items-center justify-center rounded-xl bg-three px-5 py-2.5 text-sm sm:text-base font-semibold text-one transition duration-300 hover:bg-four;
+    }
+
+    .btn-ghost {
+        @apply inline-flex items-center justify-center rounded-xl border border-white/15 bg-transparent px-5 py-2.5 text-sm sm:text-base font-semibold text-five transition duration-300 hover:border-three hover:text-three;
+    }
+
+    .icon-link {
+        @apply inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-four transition duration-300 hover:border-three hover:text-three hover:bg-white/[0.06];
+    }
+
+    .field-input {
+        @apply w-full rounded-xl border border-white/10 bg-white/[0.03] p-4 text-base text-five outline-none transition duration-300 placeholder:text-muted focus:border-three focus:ring-2 focus:ring-three/20;
+    }
 }
