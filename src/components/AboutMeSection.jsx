@@ -36,13 +36,13 @@ const AboutMeSection = () => {
                 <div className="mt-14 grid items-center gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
                     <div
                         data-aos="fade-right"
-                        className="relative mx-auto w-60"
+                        className="relative mx-auto h-[320px] w-60"
                     >
-                        <div className="absolute inset-3 translate-x-3 translate-y-3 rounded-3xl bg-gradient-to-br from-two/70 to-transparent" />
+                        <div className="absolute left-4 top-4 h-full w-full rounded-3xl border border-two/40 bg-two/25" />
                         <img
                             src={require("../images/aboutme.webp")}
                             alt="Hossien Habka"
-                            className="relative h-[320px] w-60 rounded-3xl object-cover shadow-card transition duration-500 ease-out hover:-translate-y-1 hover:rotate-1"
+                            className="relative h-[320px] w-60 rounded-3xl object-cover shadow-card transition duration-500 ease-out hover:-translate-y-1"
                         />
                     </div>
                     <div className="flex flex-col gap-8">
@@ -69,7 +69,7 @@ const AboutMeSection = () => {
                         </div>
                         <div
                             data-aos="fade-up"
-                            className="space-y-4 text-sm leading-7 text-five/85 sm:text-base sm:leading-8"
+                            className="space-y-4 text-left text-sm leading-7 text-five sm:text-base sm:leading-8"
                         >
                             <p>
                                 I am a FrontEnd Developer Fully Able to Work

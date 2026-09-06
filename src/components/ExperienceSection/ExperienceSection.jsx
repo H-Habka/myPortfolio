@@ -11,7 +11,7 @@ const ExperienceSection = () => {
                     <div className="section-title">My Experience</div>
                     <div className="section-rule" />
                 </div>
-                <div className="mt-14 grid gap-6 md:grid-cols-2">
+                <div className="mt-14 grid items-start gap-6 md:grid-cols-2">
                     <div
                         data-aos="fade-right"
                         className="surface-card flex flex-col items-center gap-6 px-5 py-8 sm:px-8"

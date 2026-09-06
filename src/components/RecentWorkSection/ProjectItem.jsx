@@ -5,7 +5,7 @@ const ProjectItem = ({ project }) => {
     return (
         <article
             data-aos="fade-up"
-            className="surface-card flex flex-col justify-between gap-5 p-4 transition duration-300 hover:-translate-y-1 hover:border-three/30"
+            className="surface-card flex flex-col justify-between gap-5 p-5 transition duration-300 hover:-translate-y-1 hover:border-three/30"
         >
             <div className="overflow-hidden rounded-xl">
                 <img

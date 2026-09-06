@@ -34,8 +34,8 @@ const FloatingNavLink = () => {
                 }
             },
             {
-                rootMargin: "-35% 0px -45% 0px",
-                threshold: [0.15, 0.35, 0.6],
+                rootMargin: "-40% 0px -55% 0px",
+                threshold: 0,
             }
         );
 

@@ -6,9 +6,9 @@ const HeaderSection = () => {
     return (
         <section
             id="home"
-            className="relative flex min-h-screen w-full items-center px-5 sm:px-8 pt-16 pb-28"
+            className="relative flex min-h-screen w-full flex-col justify-center px-5 sm:px-8 pt-16 pb-28"
         >
-            <div className="section-inner grid items-center gap-12 md:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+            <div className="section-inner grid items-center gap-10 md:grid-cols-[1.1fr_0.9fr] md:gap-16">
                 <div className="flex flex-col items-center text-center md:items-start md:text-left">
                     <p
                         data-aos="fade-up"
@@ -86,7 +86,7 @@ const HeaderSection = () => {
                 data-aos="fade-down"
                 data-aos-delay="700"
                 href="#about"
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 text-two transition duration-300 hover:text-three"
+                className="mx-auto mt-10 text-two transition duration-300 hover:text-three md:absolute md:bottom-24 md:left-1/2 md:mt-0 md:-translate-x-1/2"
                 aria-label="Scroll to about"
             >
                 <FaHandPointDown size={28} className="animate-bounce" />
