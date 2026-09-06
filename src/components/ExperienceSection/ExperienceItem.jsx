@@ -1,17 +1,22 @@
 import React from "react";
 import { BsFillCheckCircleFill } from "react-icons/bs";
 
-const ExperienceItem = ({item}) => {
+const ExperienceItem = ({ item }) => {
     return (
-        <div data-aos="zoom-out" data-aos-offset="100" className="flex gap-2 px-2 py-2 w-full ">
-            <BsFillCheckCircleFill size={16} className="mt-1 text-one group-hover:text-five"/>
-            <div className="flex flex-col justify-between font-bold gap-3 w-full">
-                <div className="group-hover:text-three">{item.title}</div>
-                <div className="">
-                    <div className="relative w-full h-2 rounded-full bg-one group-hover:bg-three">
-                        <div className="absolute -top-1 w-4 h-4 rounded-full bg-four group-hover:bg-two"
-                        style={{left : `${item.progress-10}%`}}/>
-                    </div>
+        <div className="flex w-full gap-3 px-1 py-3">
+            <BsFillCheckCircleFill
+                size={15}
+                className="mt-1 shrink-0 text-three"
+            />
+            <div className="flex w-full flex-col gap-2">
+                <div className="text-sm font-semibold text-five">
+                    {item.title}
+                </div>
+                <div className="h-1.5 w-full overflow-hidden rounded-full bg-white/10">
+                    <div
+                        className="h-full rounded-full bg-gradient-to-r from-two to-four"
+                        style={{ width: `${item.progress}%` }}
+                    />
                 </div>
             </div>
         </div>

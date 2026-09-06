@@ -4,46 +4,49 @@ import { FrontEndExperinces, BackEndExperinces } from "../../Experinces";
 
 const ExperienceSection = () => {
     return (
-        <div id="Experience" className="w-screen lg:h-screen flex flex-col gap-10 items-center pt-10">
-            <div
-                data-aos="zoom-out"
-                data-aos-offset="200"
-                className="flex flex-col gap-2 items-center text-center"
-            >
-                <div className="text-lg text-four">What Skills I Have</div>
-                <div className="text-3xl text-two">My Experience</div>
-            </div>
-            <div className="flex flex-col md:flex-row gap-8 w-11/12 sm:w-8/12 mx-auto justify-between md:gap-4">
-                <div
-                    data-aos="fade-right"
-                    data-aos-offset="100"
-                    className="group hover:bg-transparent  rounded-xl flex-1 bg-two flex flex-col items-center py-6 gap-6 border-2 border-two"
-                >
-                    <p className="text-center text-2xl text-five group-hover:text-white">
-                        FrontEnd Development
-                    </p>
-                    <div className="grid gap-2 grid-cols-2 ">
-                        {FrontEndExperinces.map((item) => (
-                            <ExperienceItem item={item} />
-                        ))}
+        <section id="Experience" className="section-wrap">
+            <div className="section-inner">
+                <div data-aos="fade-up" className="section-heading">
+                    <div className="section-kicker">What Skills I Have</div>
+                    <div className="section-title">My Experience</div>
+                    <div className="section-rule" />
+                </div>
+                <div className="mt-14 grid items-start gap-6 md:grid-cols-2">
+                    <div
+                        data-aos="fade-right"
+                        className="surface-card flex flex-col items-center gap-6 px-5 py-8 sm:px-8"
+                    >
+                        <p className="font-display text-center text-xl font-semibold text-five sm:text-2xl">
+                            FrontEnd Development
+                        </p>
+                        <div className="grid w-full grid-cols-1 gap-x-6 gap-y-1 sm:grid-cols-2">
+                            {FrontEndExperinces.map((item) => (
+                                <ExperienceItem
+                                    item={item}
+                                    key={item.title}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                    <div
+                        data-aos="fade-left"
+                        className="surface-card flex flex-col items-center gap-6 px-5 py-8 sm:px-8"
+                    >
+                        <p className="font-display text-center text-xl font-semibold text-five sm:text-2xl">
+                            Backend Development
+                        </p>
+                        <div className="grid w-full grid-cols-1 gap-x-6 gap-y-1 sm:grid-cols-2">
+                            {BackEndExperinces.map((item) => (
+                                <ExperienceItem
+                                    item={item}
+                                    key={item.title}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
-                <div
-                    data-aos="fade-left"
-                    data-aos-offset="100"
-                    className="group hover:bg-transparent  rounded-xl flex-1 bg-two flex flex-col items-center py-6 gap-6 border-2 border-two "
-                >
-                    <p className="text-center text-2xl text-five group-hover:text-white">
-                        Backend Development
-                    </p>
-                    <div className="grid gap-2 grid-cols-2 ">
-                        {BackEndExperinces.map((item) => (
-                            <ExperienceItem item={item} />
-                        ))}
-                    </div>
-                </div>
             </div>
-        </div>
+        </section>
     );
 };
 

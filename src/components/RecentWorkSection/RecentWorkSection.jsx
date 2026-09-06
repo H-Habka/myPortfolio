@@ -4,24 +4,20 @@ import { projects } from "../../projects";
 
 const RecentWorkSection = () => {
     return (
-        <div
-            id="RecentWork"
-            className="w-screen flex flex-col gap-10 items-center pt-10"
-        >
-            <div
-                data-aos="zoom-out"
-                data-aos-offset="200"
-                className="flex flex-col gap-2 items-center text-center"
-            >
-                <div className="text-lg text-four">My recent Work</div>
-                <div className="text-3xl text-two">Portfolio</div>
+        <section id="RecentWork" className="section-wrap">
+            <div className="section-inner">
+                <div data-aos="fade-up" className="section-heading">
+                    <div className="section-kicker">My recent Work</div>
+                    <div className="section-title">Portfolio</div>
+                    <div className="section-rule" />
+                </div>
+                <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                    {projects.map((project) => (
+                        <ProjectItem project={project} key={project.id} />
+                    ))}
+                </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 px-4 ">
-                {projects.map((project) => (
-                    <ProjectItem project={project} key={project.id}/>
-                ))}
-            </div>
-        </div>
+        </section>
     );
 };
 
