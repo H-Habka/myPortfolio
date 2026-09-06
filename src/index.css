@@ -51,7 +51,8 @@ code {
     }
 
     .section-kicker {
-        @apply font-medium text-xs sm:text-sm uppercase tracking-[0.22em] text-four/80;
+        @apply font-medium text-xs sm:text-sm uppercase tracking-[0.22em] text-four;
+        opacity: 0.85;
     }
 
     .section-title {
@@ -67,7 +68,9 @@ code {
     }
 
     .surface-card {
-        @apply rounded-2xl border border-white/10 bg-surface/80 shadow-card backdrop-blur-sm;
+        @apply rounded-2xl shadow-card backdrop-blur-sm;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background-color: rgba(20, 26, 22, 0.82);
     }
 
     .btn-primary {
@@ -75,14 +78,27 @@ code {
     }
 
     .btn-ghost {
-        @apply inline-flex items-center justify-center rounded-xl border border-white/15 bg-transparent px-5 py-2.5 text-sm sm:text-base font-semibold text-five transition duration-300 hover:border-three hover:text-three;
+        @apply inline-flex items-center justify-center rounded-xl bg-transparent px-5 py-2.5 text-sm sm:text-base font-semibold text-five transition duration-300 hover:border-three hover:text-three;
+        border: 1px solid rgba(255, 255, 255, 0.15);
     }
 
     .icon-link {
-        @apply inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-four transition duration-300 hover:border-three hover:text-three hover:bg-white/[0.06];
+        @apply inline-flex h-11 w-11 items-center justify-center rounded-full text-four transition duration-300 hover:border-three hover:text-three;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0.03);
+    }
+
+    .icon-link:hover {
+        background-color: rgba(255, 255, 255, 0.06);
     }
 
     .field-input {
-        @apply w-full rounded-xl border border-white/10 bg-white/[0.03] p-4 text-base text-five outline-none transition duration-300 placeholder:text-muted focus:border-three focus:ring-2 focus:ring-three/20;
+        @apply w-full rounded-xl p-4 text-base text-five outline-none transition duration-300 placeholder:text-muted focus:border-three;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0.03);
+    }
+
+    .field-input:focus {
+        box-shadow: 0 0 0 3px rgba(143, 184, 137, 0.2);
     }
 }
