@@ -342,4 +342,11 @@ code {
     .skill-node {
         animation: node-breathe 4.6s ease-in-out infinite;
     }
+
+    .signature-canvas {
+        display: block;
+        height: 100% !important;
+        width: 100% !important;
+        background: transparent;
+    }
 }

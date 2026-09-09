@@ -7,7 +7,7 @@ import gsap from "gsap";
 import { hero, profile } from "../../content/identity";
 import { publicUrl } from "../../utils/publicUrl";
 import { prefersReducedMotion, registerMotion } from "../../utils/motion";
-import StackField from "../visual/StackField";
+import Signature3D from "../visual/Signature3D";
 
 const Hero = () => {
     const root = useRef(null);
@@ -23,6 +23,18 @@ const Hero = () => {
                 .from("[data-hero='copy']", { y: 24, opacity: 0, duration: 0.7, stagger: 0.08 }, "-=0.45")
                 .from("[data-hero='portrait']", { scale: 0.92, opacity: 0, duration: 1.1 }, "-=0.7")
                 .from("[data-hero='field']", { opacity: 0, duration: 1.2 }, "-=0.9");
+
+            gsap.to("[data-hero='field']", {
+                opacity: 0.18,
+                y: -36,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: "#home",
+                    start: "center top",
+                    end: "bottom top",
+                    scrub: true,
+                },
+            });
         }, root);
         return () => ctx.revert();
     }, []);
@@ -111,14 +123,15 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <div className="relative mx-auto w-full max-w-[420px]">
+                <div className="relative mx-auto w-full max-w-[420px] lg:max-w-none">
                     <div
                         data-hero="field"
-                        className="pointer-events-none absolute -inset-10 opacity-80 lg:-right-16 lg:inset-auto lg:h-[420px] lg:w-[560px]"
+                        aria-hidden
+                        className="pointer-events-none absolute -inset-[18%] z-0 min-h-[320px] opacity-90 sm:min-h-[380px] lg:-inset-y-24 lg:-left-28 lg:-right-36"
                     >
-                        <StackField />
+                        <Signature3D />
                     </div>
-                    <div data-hero="portrait" className="portrait-frame relative mx-auto mb-16 w-[250px] sm:mb-0 sm:w-[300px] lg:w-[320px]">
+                    <div data-hero="portrait" className="portrait-frame relative z-10 mx-auto mb-16 w-[250px] sm:mb-0 sm:w-[300px] lg:w-[320px]">
                         <div className="absolute -inset-8 rounded-[2rem] bg-cyan/20 blur-3xl" />
                         <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-navy shadow-glow">
                             <img
