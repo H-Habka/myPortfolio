@@ -8,6 +8,15 @@ const Skills = () => {
     const active = skillGroups.find((group) => group.id === focus) || skillGroups[0];
     const marquee = skillGroups.flatMap((group) => group.items);
 
+    const moveFocus = (delta) => {
+        const index = skillGroups.findIndex((group) => group.id === focus);
+        const next = skillGroups[(index + delta + skillGroups.length) % skillGroups.length];
+        setFocus(next.id);
+        window.requestAnimationFrame(() => {
+            document.getElementById(`skill-tab-${next.id}`)?.focus();
+        });
+    };
+
     return (
         <section id="skills" className="section-wrap">
             <div className="section-inner">
@@ -29,7 +38,21 @@ const Skills = () => {
                     </div>
 
                     <div className="grid gap-3">
-                        <div className="flex flex-wrap gap-2" role="tablist" aria-label="Skill groups">
+                        <div
+                            className="flex flex-wrap gap-2"
+                            role="tablist"
+                            aria-label="Skill groups"
+                            onKeyDown={(event) => {
+                                if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+                                    event.preventDefault();
+                                    moveFocus(1);
+                                }
+                                if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+                                    event.preventDefault();
+                                    moveFocus(-1);
+                                }
+                            }}
+                        >
                             {skillGroups.map((group, index) => {
                                 const selected = group.id === focus;
                                 return (
@@ -37,9 +60,12 @@ const Skills = () => {
                                         key={group.id}
                                         type="button"
                                         role="tab"
+                                        id={`skill-tab-${group.id}`}
+                                        aria-controls={`skill-panel-${group.id}`}
                                         aria-selected={selected}
+                                        tabIndex={selected ? 0 : -1}
                                         onClick={() => setFocus(group.id)}
-                                        className={`rounded-full px-3.5 py-2 font-mono text-[10px] uppercase tracking-[0.16em] transition ${
+                                        className={`tap-target rounded-full px-3.5 font-mono text-[10px] uppercase tracking-[0.16em] transition ${
                                             selected
                                                 ? "bg-cyan/15 text-cyan"
                                                 : "text-muted hover:text-paper"
@@ -56,7 +82,13 @@ const Skills = () => {
                             })}
                         </div>
 
-                        <article data-reveal className="surface-card min-h-[280px] p-7">
+                        <article
+                            data-reveal
+                            className="surface-card min-h-[280px] p-7"
+                            role="tabpanel"
+                            id={`skill-panel-${active.id}`}
+                            aria-labelledby={`skill-tab-${active.id}`}
+                        >
                             <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-cyan">
                                 {active.kicker}
                             </p>
@@ -89,7 +121,7 @@ const Skills = () => {
                                         type="button"
                                         data-reveal
                                         onClick={() => setFocus(group.id)}
-                                        className="surface-card p-5 text-left transition hover:-translate-y-0.5"
+                                        className="surface-card min-h-[5.5rem] p-5 text-left transition hover:-translate-y-0.5"
                                     >
                                         <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
                                             {group.kicker}
@@ -107,7 +139,7 @@ const Skills = () => {
                 </div>
             </div>
 
-            <div className="mt-14 overflow-hidden border-y border-white/10 py-4">
+            <div className="mt-14 overflow-hidden border-y border-white/10 py-4" aria-hidden>
                 <div className="marquee-track flex gap-10 whitespace-nowrap">
                     {[...marquee, ...marquee].map((item, index) => (
                         <span

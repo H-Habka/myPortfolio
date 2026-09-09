@@ -14,6 +14,7 @@ export const profile = {
     githubHandle: "H-Habka",
     whatsapp: "https://wa.me/971588930130",
     photo: "images/linkedin-profile-photo.png",
+    photoDisplay: "images/linkedin-profile-photo-720.webp",
     summary:
         "Full-stack developer with 4+ years across frontend, backend, React Native, and databases. Sole engineer at EasySales — React/Next.js dashboards, React Native mobile, and Shopify Liquid/private apps. Previously Jewelry Photographer and Shopify store developer at Saray Jewellery. Focused on SEO, Core Web Vitals, and UX. Work in Agile with SOLID and OWASP in mind; AI-assisted with Cursor and ChatGPT.",
 };

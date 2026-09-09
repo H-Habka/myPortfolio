@@ -7,8 +7,8 @@ import {
     profile,
     stats,
 } from "../../content/identity";
-import { publicUrl } from "../../utils/publicUrl";
 import SectionHeading from "../ui/SectionHeading";
+import Portrait from "../ui/Portrait";
 
 const About = () => {
     return (
@@ -21,11 +21,7 @@ const About = () => {
                 <div className="mt-16 grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
                     <div data-reveal className="relative mx-auto">
                         <div className="absolute -left-5 -top-5 h-full w-full rounded-[2rem] border border-cyan/35" />
-                        <img
-                            src={publicUrl(profile.photo)}
-                            alt={profile.name}
-                            className="relative h-[380px] w-72 rounded-[2rem] object-cover object-top shadow-card sm:h-[440px] sm:w-80"
-                        />
+                        <Portrait className="relative h-[380px] w-72 rounded-[2rem] object-cover object-top shadow-card sm:h-[440px] sm:w-80" />
                     </div>
 
                     <div className="flex flex-col gap-8">
@@ -117,13 +113,25 @@ const About = () => {
                     </div>
                 </div>
 
-                <div data-reveal className="mt-8 flex flex-wrap gap-3">
-                    <a href={profile.whatsapp} target="_blank" rel="noreferrer" className="btn-wa">
-                        <ImWhatsapp size={16} />
+                <div data-reveal className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap">
+                    <a
+                        href={profile.whatsapp}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`WhatsApp ${profile.name} at ${profile.phone}`}
+                        className="btn-wa tap-target w-full sm:w-auto"
+                    >
+                        <ImWhatsapp size={16} aria-hidden />
                         WhatsApp · {profile.phone}
                     </a>
-                    <a href={profile.linkedin} target="_blank" rel="noreferrer" className="btn-li">
-                        <BsLinkedin size={15} />
+                    <a
+                        href={profile.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`LinkedIn profile of ${profile.name}`}
+                        className="btn-li tap-target w-full sm:w-auto"
+                    >
+                        <BsLinkedin size={15} aria-hidden />
                         LinkedIn
                     </a>
                 </div>

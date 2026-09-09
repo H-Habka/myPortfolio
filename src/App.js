@@ -43,16 +43,13 @@ function App() {
 
     return (
         <div className="relative min-h-screen w-full overflow-x-hidden bg-ink text-paper">
-            <a
-                href="#home"
-                className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[70] focus:rounded-full focus:bg-cyan focus:px-4 focus:py-2 focus:text-ink"
-            >
+            <a href="#main" className="skip-link">
                 Skip to content
             </a>
             <Ambient />
             <ScrollProgress />
             <SiteHeader />
-            <main>
+            <main id="main" className="relative z-0 isolate">
                 <Hero />
                 <About />
                 <Experience />
