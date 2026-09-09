@@ -67,19 +67,54 @@ const About = () => {
                     ))}
                 </div>
 
-                <div data-reveal className="surface-card mt-5 flex flex-col gap-3 px-6 py-6 sm:flex-row sm:items-center sm:justify-between">
-                    <div>
-                        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-cyan">
-                            Education
-                        </p>
-                        <p className="mt-2 font-display text-2xl text-paper">
-                            {education.degree}
-                        </p>
-                        <p className="mt-1 text-sm text-muted">
-                            {education.school} · {education.dates}
-                        </p>
+                <div data-reveal className="surface-card mt-5 overflow-hidden p-6 sm:p-8">
+                    <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+                        <div>
+                            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-cyan">
+                                Education
+                            </p>
+                            <p className="mt-2 font-display text-3xl text-paper sm:text-4xl">
+                                {education.degree}
+                            </p>
+                            <p className="mt-2 text-sm text-muted">
+                                {education.school} · {education.dates}
+                            </p>
+                        </div>
+                        <p className="font-semibold text-cyan">{education.note}</p>
                     </div>
-                    <p className="font-semibold text-cyan">{education.note}</p>
+
+                    <div className="mt-8 grid gap-3 md:grid-cols-2">
+                        {education.honors.map((item) => (
+                            <div
+                                key={item.title}
+                                className="rounded-2xl border px-5 py-5"
+                                style={{ borderColor: "rgba(148, 197, 232, 0.14)" }}
+                            >
+                                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
+                                    Honor
+                                </p>
+                                <p className="mt-2 font-display text-2xl text-paper">
+                                    {item.title}
+                                </p>
+                                <p className="mt-2 text-sm leading-6 text-muted">{item.detail}</p>
+                            </div>
+                        ))}
+                        {education.projects.map((item) => (
+                            <div
+                                key={item.title}
+                                className="rounded-2xl border px-5 py-5"
+                                style={{ borderColor: "rgba(148, 197, 232, 0.14)" }}
+                            >
+                                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
+                                    Academic work
+                                </p>
+                                <p className="mt-2 font-display text-2xl text-paper">
+                                    {item.title}
+                                </p>
+                                <p className="mt-2 text-sm leading-6 text-muted">{item.detail}</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
                 <div data-reveal className="mt-8 flex flex-wrap gap-3">

@@ -123,6 +123,25 @@ code {
     }
 }
 
+@keyframes orbit-spin {
+    from {
+        stroke-dashoffset: 0;
+    }
+    to {
+        stroke-dashoffset: -220;
+    }
+}
+
+@keyframes node-breathe {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -132,7 +151,9 @@ code {
     .marquee-track,
     .flow-line,
     .node-pulse,
-    .name-sheen {
+    .name-sheen,
+    .orbit-ring,
+    .skill-node {
         animation: none !important;
     }
 }
@@ -311,5 +332,14 @@ code {
     .marquee-track {
         animation: marquee 32s linear infinite;
         width: max-content;
+    }
+
+    .orbit-ring {
+        stroke-dasharray: 4 10;
+        animation: orbit-spin 28s linear infinite;
+    }
+
+    .skill-node {
+        animation: node-breathe 4.6s ease-in-out infinite;
     }
 }
