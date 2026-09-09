@@ -30,7 +30,7 @@ export const work = [
         company: "EasySales",
         location: "Abu Dhabi",
         dates: "Feb 2025 – Present",
-        teaser: "Sole engineer — EasyChat RN on Play/App Store; Shopify Dawn + custom app",
+        teaser: "Sole engineer — EasyChat (React Native) on the Play Store and App Store; Shopify Dawn + custom app",
         featured: true,
     },
     {

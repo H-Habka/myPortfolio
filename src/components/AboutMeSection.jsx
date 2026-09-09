@@ -69,7 +69,7 @@ const AboutMeSection = () => {
                                 rel="noreferrer"
                                 className="btn-primary"
                             >
-                                WhatsApp
+                                WhatsApp · {profile.phone}
                             </a>
                             <a
                                 href={profile.linkedin}

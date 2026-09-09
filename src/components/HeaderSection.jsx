@@ -65,7 +65,7 @@ const HeaderSection = () => {
                             className="btn-primary gap-2"
                         >
                             <ImWhatsapp size={18} />
-                            WhatsApp
+                            WhatsApp · {profile.phone}
                         </a>
                         <a
                             href={profile.linkedin}
