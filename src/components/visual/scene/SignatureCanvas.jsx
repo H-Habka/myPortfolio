@@ -8,10 +8,10 @@ import { sceneRig } from "./sceneRig";
 
 const Lights = () => (
     <>
-        <ambientLight intensity={0.58} />
-        <directionalLight position={[3.2, 3.6, 2.4]} intensity={0.9} color="#e8f1f8" />
-        <pointLight position={[-2.4, 1.2, 2.1]} intensity={0.7} color="#3ee0d0" />
-        <pointLight position={[2.2, -0.8, 1.4]} intensity={0.42} color="#8b7cff" />
+        <ambientLight intensity={0.72} />
+        <directionalLight position={[3.2, 3.6, 2.4]} intensity={1.05} color="#e8f1f8" />
+        <pointLight position={[-2.4, 1.2, 2.1]} intensity={0.95} color="#3ee0d0" />
+        <pointLight position={[2.2, -0.8, 1.4]} intensity={0.55} color="#8b7cff" />
     </>
 );
 
@@ -74,7 +74,7 @@ const SignatureCanvas = ({ mobile }) => {
             className="signature-canvas"
             frameloop={live ? "always" : "never"}
             dpr={mobile ? 1 : [1, 1.5]}
-            camera={{ position: [0.15, 0.12, mobile ? 5.8 : 5.15], fov: mobile ? 40 : 36 }}
+            camera={{ position: [0.12, 0.08, mobile ? 5.55 : 4.85], fov: mobile ? 40 : 35 }}
             gl={{
                 antialias: !mobile,
                 alpha: true,

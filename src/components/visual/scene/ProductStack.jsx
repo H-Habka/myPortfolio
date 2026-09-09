@@ -9,10 +9,10 @@ const Screen = ({ map, width, height }) => {
             <planeGeometry args={[width, height]} />
             <meshStandardMaterial
                 map={map}
-                roughness={0.38}
-                metalness={0.12}
+                roughness={0.32}
+                metalness={0.08}
                 emissive="#3ee0d0"
-                emissiveIntensity={0.08}
+                emissiveIntensity={0.22}
                 emissiveMap={map}
                 toneMapped={false}
             />
@@ -42,7 +42,7 @@ const Token = ({ map, position, scale = 0.42 }) => (
                 roughness={0.28}
                 metalness={0.22}
                 emissive="#5b8cff"
-                emissiveIntensity={0.12}
+                emissiveIntensity={0.28}
                 emissiveMap={map}
                 toneMapped={false}
             />
@@ -92,9 +92,9 @@ const Dust = ({ count }) => {
 const Beams = () => {
     const geometry = useMemo(() => {
         const curve = new THREE.CatmullRomCurve3([
-            new THREE.Vector3(-1.42, 0.28, -0.15),
-            new THREE.Vector3(-0.2, 0.05, 0.2),
-            new THREE.Vector3(1.12, -0.12, 0.28),
+            new THREE.Vector3(-1.62, 0.42, -0.08),
+            new THREE.Vector3(-0.15, 0.08, 0.22),
+            new THREE.Vector3(1.38, 0.02, 0.38),
         ]);
         return new THREE.BufferGeometry().setFromPoints(curve.getPoints(32));
     }, []);
@@ -138,23 +138,23 @@ const ProductStack = ({ textures, mobile }) => {
         root.current.rotation.x =
             sceneRig.pointerY * (mobile ? 0.04 : 0.1) + 0.08 - ease * 0.14;
         root.current.position.y = Math.sin(t * 0.42) * 0.05;
-        root.current.position.z = -ease * 0.35;
+        root.current.position.z = -ease * 0.22;
 
         if (dash.current) {
-            dash.current.position.set(-1.38 - ease * 0.22, 0.32 + Math.sin(t * 0.7) * 0.03, -0.18);
-            dash.current.rotation.set(0.1, 0.46 + ease * 0.28, -0.04);
+            dash.current.position.set(-1.62 - ease * 0.28, 0.48 + Math.sin(t * 0.7) * 0.03, -0.08);
+            dash.current.rotation.set(0.08, 0.52 + ease * 0.32, -0.04);
         }
         if (phone.current) {
-            phone.current.position.set(1.18 + ease * 0.08, -0.12 + Math.sin(t * 0.55 + 1) * 0.04, 0.32);
-            phone.current.rotation.set(0.12, -0.38 - ease * 0.18, 0.05);
+            phone.current.position.set(1.42 + ease * 0.12, 0.02 + Math.sin(t * 0.55 + 1) * 0.04, 0.42);
+            phone.current.rotation.set(0.1, -0.42 - ease * 0.2, 0.05);
         }
         if (code.current) {
-            code.current.position.set(-0.12, -0.92 + ease * 0.12, 0.55);
-            code.current.rotation.set(0.58 - ease * 0.12, 0.12, 0.02);
+            code.current.position.set(0.08, -1.12 + ease * 0.16, 0.62);
+            code.current.rotation.set(0.52 - ease * 0.1, 0.1, 0.02);
         }
         if (store.current) {
-            store.current.position.set(0.72, 0.88 - ease * 0.08, -0.42);
-            store.current.rotation.set(-0.08, -0.22, 0.06);
+            store.current.position.set(0.98, 1.08 - ease * 0.1, -0.32);
+            store.current.rotation.set(-0.1, -0.26, 0.06);
             store.current.visible = !mobile;
         }
         if (tokens.current) {
@@ -164,7 +164,7 @@ const ProductStack = ({ textures, mobile }) => {
     });
 
     return (
-        <group ref={root} scale={mobile ? 0.78 : 1}>
+        <group ref={root} scale={mobile ? 0.84 : 1.08}>
             <group ref={dash}>
                 <Bezel width={2.15} height={1.34} />
                 <Screen map={textures.dashboard} width={2.15} height={1.34} />
