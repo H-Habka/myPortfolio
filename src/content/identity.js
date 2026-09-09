@@ -2,17 +2,19 @@ export const SITE_URL = "https://h-habka.github.io/myPortfolio";
 
 export const profile = {
     name: "Hossien Habka",
+    firstName: "Hossien",
+    lastName: "Habka",
     title: "Full-Stack Web & Application Developer",
-    location: "Al Ain - Abu Dhabi - UAE",
+    location: "Al Ain / Abu Dhabi, UAE",
     phone: "+971588930130",
     phoneHref: "tel:+971588930130",
     email: "hossien.habka1@gmail.com",
     linkedin: "https://www.linkedin.com/in/hossien-habka-b67069229",
     github: "https://github.com/H-Habka",
-    whatsapp: "https://api.whatsapp.com/send?phone=%2b971588930130",
-    photo: "images/hossien.png",
+    whatsapp: "https://wa.me/971588930130",
+    photo: "images/linkedin-profile-photo.png",
     summary:
-        "Full-stack developer with 4+ years across frontend, backend, React Native, and databases. Sole engineer at EasySales — React/Next.js dashboards, React Native mobile, and Shopify Liquid/private apps. Focused on SEO, Core Web Vitals, and UX. Work in Agile with SOLID and OWASP in mind; AI-assisted with Cursor and ChatGPT.",
+        "Full-stack developer with 4+ years across frontend, backend, React Native, and databases. Sole engineer at EasySales — React/Next.js dashboards, React Native mobile, and Shopify Liquid/private apps. Previously Jewelry Photographer and Shopify store developer at Saray Jewellery. Focused on SEO, Core Web Vitals, and UX. Work in Agile with SOLID and OWASP in mind; AI-assisted with Cursor and ChatGPT.",
 };
 
 export const education = {
@@ -29,11 +31,14 @@ export const work = [
         location: "Abu Dhabi",
         dates: "Feb 2025 – Present",
         teaser: "Sole engineer — EasyChat RN on Play/App Store; Shopify Dawn + custom app",
+        featured: true,
     },
     {
         title: "Jewelry Photographer & Shopify Store Dev/Admin",
         company: "Saray Jewellery",
         dates: "Jun 2024 – Feb 2025",
+        teaser: "Shopify store development and administration, plus jewelry photography",
+        featured: true,
     },
     {
         title: "Frontend Developer",

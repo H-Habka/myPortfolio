@@ -6,11 +6,11 @@ import { FaServicestack } from "react-icons/fa";
 import FloatingNavLinkItem from "./FloatingNavLinkItem";
 
 const links = [
-    { href: "#home", icon: <AiOutlineHome size={20} /> },
-    { href: "#about", icon: <BsPerson size={20} /> },
-    { href: "#Experience", icon: <BiBookOpen size={20} /> },
-    { href: "#RecentWork", icon: <FaServicestack size={20} /> },
-    { href: "#Contact", icon: <BiMessageSquareDetail size={20} /> },
+    { href: "#home", icon: <AiOutlineHome size={20} />, label: "Home" },
+    { href: "#about", icon: <BsPerson size={20} />, label: "About" },
+    { href: "#Experience", icon: <BiBookOpen size={20} />, label: "Experience" },
+    { href: "#RecentWork", icon: <FaServicestack size={20} />, label: "Projects" },
+    { href: "#Contact", icon: <BiMessageSquareDetail size={20} />, label: "Contact" },
 ];
 
 const FloatingNavLink = () => {
@@ -46,7 +46,7 @@ const FloatingNavLink = () => {
     return (
         <nav
             aria-label="Section navigation"
-            className="fixed bottom-6 left-1/2 z-50 flex -translate-x-1/2 items-center gap-1 rounded-full border border-white/10 bg-[#0c100e]/70 px-2 py-2 shadow-card backdrop-blur-md"
+            className="fixed bottom-6 left-1/2 z-50 flex -translate-x-1/2 items-center gap-1 rounded-full border border-white/10 bg-[#070709]/70 px-2 py-2 shadow-card backdrop-blur-md"
         >
             {links.map((link) => (
                 <FloatingNavLinkItem
@@ -54,6 +54,7 @@ const FloatingNavLink = () => {
                     href={link.href}
                     icon={link.icon}
                     active={active === link.href}
+                    label={link.label}
                 />
             ))}
         </nav>

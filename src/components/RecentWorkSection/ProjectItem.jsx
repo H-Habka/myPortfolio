@@ -19,7 +19,7 @@ const ProjectItem = ({ project }) => {
                     <h3 className="font-display text-lg font-semibold leading-snug text-five">
                         {title}
                     </h3>
-                    <span className="shrink-0 rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-xs text-four">
+                    <span className="shrink-0 rounded-full border border-white/10 px-2.5 py-1 text-xs text-three">
                         {language}
                     </span>
                 </div>

@@ -10,6 +10,8 @@ import {
     ExperienceSection,
     FloatingNavLink,
     RecentWorkSection,
+    TopBar,
+    CompanyBand,
 } from "./components";
 
 function App() {
@@ -28,15 +30,17 @@ function App() {
                 aria-hidden
                 className="pointer-events-none fixed inset-0 -z-10"
             >
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(109,154,103,0.16),_transparent_55%)]" />
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(143,184,137,0.08),_transparent_45%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(201,162,90,0.16),_transparent_52%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(37,211,102,0.06),_transparent_40%)]" />
                 <div
-                    className="absolute inset-0 opacity-[0.08] mix-blend-overlay"
+                    className="absolute inset-0 opacity-[0.07] mix-blend-overlay"
                     style={{ backgroundImage: "url(" + grain + ")" }}
                 />
             </div>
+            <TopBar />
             <FloatingNavLink />
             <HeaderSection />
+            <CompanyBand />
             <AboutMeSection />
             <ExperienceSection />
             <RecentWorkSection />

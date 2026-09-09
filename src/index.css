@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -10,10 +10,9 @@ html {
 
 body {
     margin: 0;
-    font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI",
-        sans-serif;
-    color: #eef4ec;
-    background-color: #0c100e;
+    font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: #f6f1e8;
+    background-color: #070709;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -24,11 +23,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: #0c100e;
+    background: #070709;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #2a382c;
+    background: #3a3428;
     border-radius: 999px;
 }
 
@@ -41,6 +40,32 @@ code {
     box-sizing: border-box;
 }
 
+@keyframes spin-slow {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes gold-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .portrait-ring,
+    .gold-sheen {
+        animation: none !important;
+    }
+}
+
 @layer components {
     .section-wrap {
         @apply relative w-full px-5 sm:px-8 py-20 md:py-28;
@@ -51,54 +76,112 @@ code {
     }
 
     .section-kicker {
-        @apply font-medium text-xs sm:text-sm uppercase tracking-[0.22em] text-four;
-        opacity: 0.85;
+        @apply font-medium text-xs sm:text-sm uppercase text-three;
+        letter-spacing: 0.22em;
+        opacity: 0.9;
     }
 
     .section-title {
-        @apply font-display text-3xl sm:text-4xl font-semibold tracking-tight text-five;
+        @apply font-display text-3xl sm:text-5xl font-semibold tracking-tight text-five;
     }
 
     .section-heading {
-        @apply flex flex-col items-center text-center gap-2;
+        @apply flex flex-col items-start gap-2;
     }
 
     .section-rule {
-        @apply mt-1 h-px w-12 bg-gradient-to-r from-transparent via-three to-transparent;
+        @apply mt-1 h-px w-16;
+        background: linear-gradient(90deg, #c9a25a, transparent);
     }
 
     .surface-card {
-        @apply rounded-2xl shadow-card backdrop-blur-sm;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        background-color: rgba(20, 26, 22, 0.82);
+        @apply rounded-2xl shadow-card;
+        border: 1px solid rgba(243, 230, 197, 0.12);
+        background-color: rgba(17, 17, 20, 0.86);
+        backdrop-filter: blur(12px);
     }
 
     .btn-primary {
-        @apply inline-flex items-center justify-center rounded-xl bg-three px-5 py-2.5 text-sm sm:text-base font-semibold text-one transition duration-300 hover:bg-four;
+        @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm sm:text-base font-semibold transition duration-300;
+        background: #25d366;
+        color: #06210f;
+    }
+
+    .btn-primary:hover {
+        background: #3be07a;
+    }
+
+    .btn-linkedin {
+        @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm sm:text-base font-semibold transition duration-300;
+        background: #0a66c2;
+        color: #f6f1e8;
+    }
+
+    .btn-linkedin:hover {
+        background: #1b7de0;
     }
 
     .btn-ghost {
-        @apply inline-flex items-center justify-center rounded-xl bg-transparent px-5 py-2.5 text-sm sm:text-base font-semibold text-five transition duration-300 hover:border-three hover:text-three;
-        border: 1px solid rgba(255, 255, 255, 0.15);
+        @apply inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm sm:text-base font-semibold text-five transition duration-300;
+        border: 1px solid rgba(243, 230, 197, 0.22);
+        background: transparent;
+    }
+
+    .btn-ghost:hover {
+        border-color: #c9a25a;
+        color: #e8c97a;
     }
 
     .icon-link {
-        @apply inline-flex h-11 w-11 items-center justify-center rounded-full text-four transition duration-300 hover:border-three hover:text-three;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        @apply inline-flex h-11 w-11 items-center justify-center rounded-full text-four transition duration-300;
+        border: 1px solid rgba(243, 230, 197, 0.16);
         background-color: rgba(255, 255, 255, 0.03);
     }
 
     .icon-link:hover {
-        background-color: rgba(255, 255, 255, 0.06);
+        border-color: #c9a25a;
+        color: #e8c97a;
+        background-color: rgba(201, 162, 90, 0.08);
     }
 
     .field-input {
-        @apply w-full rounded-xl p-4 text-base text-five outline-none transition duration-300 placeholder:text-muted focus:border-three;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        @apply w-full rounded-xl p-4 text-base text-five outline-none transition duration-300;
+        border: 1px solid rgba(243, 230, 197, 0.14);
         background-color: rgba(255, 255, 255, 0.03);
     }
 
+    .field-input::placeholder {
+        color: #9b9488;
+    }
+
     .field-input:focus {
-        box-shadow: 0 0 0 3px rgba(143, 184, 137, 0.2);
+        border-color: #c9a25a;
+        box-shadow: 0 0 0 3px rgba(201, 162, 90, 0.2);
+    }
+
+    .gold-sheen {
+        background: linear-gradient(
+            110deg,
+            #f6f1e8 0%,
+            #e8c97a 35%,
+            #f6f1e8 70%
+        );
+        background-size: 220% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: gold-shift 8s linear infinite;
+    }
+
+    .portrait-ring {
+        animation: spin-slow 16s linear infinite;
+        background: conic-gradient(
+            from 180deg,
+            #c9a25a,
+            transparent 38%,
+            #e8c97a,
+            transparent 72%,
+            #c9a25a
+        );
     }
 }

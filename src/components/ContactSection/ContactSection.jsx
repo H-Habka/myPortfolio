@@ -5,7 +5,7 @@ import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { MdLocationOn } from "react-icons/md";
 import { profile } from "../../content/identity";
 
-const channels = [
+const secondary = [
     {
         icon: GoMail,
         label: "Email",
@@ -13,21 +13,9 @@ const channels = [
         href: `mailto:${profile.email}`,
     },
     {
-        icon: ImWhatsapp,
-        label: "WhatsApp",
-        value: profile.phone,
-        href: profile.whatsapp,
-    },
-    {
-        icon: BsLinkedin,
-        label: "LinkedIn",
-        value: "hossien-habka",
-        href: profile.linkedin,
-    },
-    {
         icon: BsGithub,
         label: "GitHub",
-        value: "H-Habka",
+        value: "github.com/H-Habka",
         href: profile.github,
     },
     {
@@ -39,92 +27,94 @@ const channels = [
 ];
 
 const ContactSection = () => {
-    const onSubmit = (event) => {
-        event.preventDefault();
-        const form = event.currentTarget;
-        const name = form.elements.name.value.trim();
-        const email = form.elements.email.value.trim();
-        const message = form.elements.message.value.trim();
-        const subject = encodeURIComponent(`Portfolio contact from ${name}`);
-        const body = encodeURIComponent(`${message}\n\n— ${name} <${email}>`);
-        window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
-    };
-
     return (
         <section id="Contact" className="section-wrap pb-36">
             <div className="section-inner">
                 <div data-aos="fade-up" className="section-heading mb-10">
-                    <div className="section-kicker">Say hello</div>
+                    <div className="section-kicker">Start a conversation</div>
                     <div className="section-title">Contact</div>
                     <div className="section-rule" />
                 </div>
-                <div className="grid gap-8 md:grid-cols-[0.9fr_1.4fr] md:gap-10">
-                    <div className="flex flex-col gap-4">
-                        {channels.map((channel) => {
-                            const Icon = channel.icon;
-                            return (
-                                <div
-                                    key={channel.label}
-                                    data-aos="fade-up"
-                                    className="surface-card flex flex-col items-center gap-2 px-4 py-6 text-center transition duration-300 hover:border-three/40"
-                                >
-                                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-two/15 text-three">
-                                        <Icon size={20} />
-                                    </div>
-                                    <div className="font-semibold text-five">
+
+                <div className="grid gap-4 md:grid-cols-2">
+                    <a
+                        data-aos="fade-up"
+                        href={profile.whatsapp}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="surface-card group flex flex-col justify-between p-8 transition duration-300 hover:-translate-y-1"
+                    >
+                        <ImWhatsapp className="text-wa" size={28} />
+                        <div className="mt-10">
+                            <p className="font-display text-3xl font-semibold text-five">
+                                WhatsApp
+                            </p>
+                            <p className="mt-2 text-muted">{profile.phone}</p>
+                        </div>
+                    </a>
+                    <a
+                        data-aos="fade-up"
+                        data-aos-delay="80"
+                        href={profile.linkedin}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="surface-card group flex flex-col justify-between p-8 transition duration-300 hover:-translate-y-1"
+                    >
+                        <BsLinkedin className="text-li" size={28} />
+                        <div className="mt-10">
+                            <p className="font-display text-3xl font-semibold text-five">
+                                LinkedIn
+                            </p>
+                            <p className="mt-2 text-muted">
+                                hossien-habka-b67069229
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                    {secondary.map((channel) => {
+                        const Icon = channel.icon;
+                        const inner = (
+                            <>
+                                <Icon className="text-three" size={18} />
+                                <div>
+                                    <div className="text-xs uppercase tracking-[0.16em] text-muted">
                                         {channel.label}
                                     </div>
-                                    <div className="text-sm text-muted">
+                                    <div className="mt-1 text-sm font-semibold text-five">
                                         {channel.value}
                                     </div>
-                                    {channel.href ? (
-                                        <a
-                                            target="_blank"
-                                            rel="noreferrer"
-                                            href={channel.href}
-                                            className="text-sm font-semibold text-four transition duration-300 hover:text-three"
-                                        >
-                                            Open
-                                        </a>
-                                    ) : null}
                                 </div>
-                            );
-                        })}
-                    </div>
-                    <form className="flex flex-col gap-4" onSubmit={onSubmit}>
-                        <input
-                            data-aos="fade-up"
-                            required
-                            name="name"
-                            className="field-input"
-                            type="text"
-                            placeholder="Your Full Name"
-                        />
-                        <input
-                            data-aos="fade-up"
-                            required
-                            name="email"
-                            className="field-input"
-                            type="email"
-                            placeholder="Your Email"
-                        />
-                        <textarea
-                            data-aos="fade-up"
-                            required
-                            name="message"
-                            className="field-input min-h-[220px] resize-y"
-                            cols="30"
-                            rows="10"
-                            placeholder="Your Message"
-                        ></textarea>
-                        <button
-                            data-aos="fade-up"
-                            type="submit"
-                            className="btn-primary w-fit"
-                        >
-                            Email me
-                        </button>
-                    </form>
+                            </>
+                        );
+                        const className =
+                            "surface-card flex items-center gap-3 px-5 py-5";
+                        return channel.href ? (
+                            <a
+                                key={channel.label}
+                                data-aos="fade-up"
+                                href={channel.href}
+                                target={
+                                    channel.href.startsWith("mailto:")
+                                        ? undefined
+                                        : "_blank"
+                                }
+                                rel="noreferrer"
+                                className={`${className} transition hover:border-three/40`}
+                            >
+                                {inner}
+                            </a>
+                        ) : (
+                            <div
+                                key={channel.label}
+                                data-aos="fade-up"
+                                className={className}
+                            >
+                                {inner}
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </section>
