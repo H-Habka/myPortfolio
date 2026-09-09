@@ -90,12 +90,18 @@ const SkillOrbit = () => {
                             <circle
                                 cx={node.x}
                                 cy={node.y}
-                                r="16"
+                                r="24"
                                 fill="transparent"
                                 className="cursor-pointer"
                                 onMouseEnter={() => setActive(node.name)}
                                 onFocus={() => setActive(node.name)}
                                 onClick={() => setActive(node.name)}
+                                onKeyDown={(event) => {
+                                    if (event.key === "Enter" || event.key === " ") {
+                                        event.preventDefault();
+                                        setActive(node.name);
+                                    }
+                                }}
                                 tabIndex={0}
                                 role="button"
                                 aria-label={node.name}

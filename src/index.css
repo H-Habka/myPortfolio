@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -21,6 +19,10 @@
 
 html {
     scroll-behavior: smooth;
+}
+
+html.lenis {
+    scroll-behavior: auto;
 }
 
 html.lenis,
@@ -156,6 +158,13 @@ code {
     .skill-node {
         animation: none !important;
     }
+
+    .btn-wa:hover,
+    .btn-li:hover,
+    .btn-ghost:hover,
+    .surface-card {
+        transform: none !important;
+    }
 }
 
 @layer components {
@@ -164,7 +173,8 @@ code {
         scroll-margin-top: 5.5rem;
     }
 
-    #home {
+    #home,
+    #main {
         scroll-margin-top: 0;
     }
 
@@ -208,6 +218,7 @@ code {
         background: #25d366;
         color: #06210f;
         box-shadow: 0 10px 30px -12px rgba(37, 211, 102, 0.7);
+        touch-action: manipulation;
     }
 
     .btn-wa:hover {
@@ -220,6 +231,7 @@ code {
         background: #0a66c2;
         color: #f4f8ff;
         box-shadow: 0 10px 30px -12px rgba(10, 102, 194, 0.65);
+        touch-action: manipulation;
     }
 
     .btn-li:hover {
@@ -343,10 +355,60 @@ code {
         animation: node-breathe 4.6s ease-in-out infinite;
     }
 
-    .signature-canvas {
+    .signature-canvas,
+    .signature-canvas canvas {
         display: block;
         height: 100% !important;
         width: 100% !important;
         background: transparent;
+        pointer-events: none !important;
+        touch-action: none;
     }
+
+    .signature-stage {
+        pointer-events: none !important;
+        isolation: isolate;
+        contain: paint;
+    }
+
+    .tap-target {
+        min-height: 2.75rem;
+        min-width: 2.75rem;
+        touch-action: manipulation;
+    }
+
+    .site-chrome {
+        isolation: isolate;
+        transform: translateZ(0);
+    }
+
+    .skip-link {
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+        z-index: 70;
+        border-radius: 999px;
+        background: var(--cyan);
+        color: var(--ink);
+        padding: 0.55rem 1rem;
+        font-weight: 600;
+        transform: translateY(-160%);
+    }
+
+    .skip-link:focus,
+    .skip-link:focus-visible {
+        transform: none;
+        outline: 2px solid #e8f1f8;
+        outline-offset: 3px;
+    }
+}
+
+:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 3px;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+    outline: none;
 }

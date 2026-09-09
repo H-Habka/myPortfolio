@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { registerMotion } from "../../../utils/motion";
+import { refreshScroll } from "../../../utils/refreshScroll";
 import { createSceneTextures } from "./canvasTextures";
 import ProductStack from "./ProductStack";
 import { sceneRig } from "./sceneRig";
@@ -15,7 +16,7 @@ const Lights = () => (
     </>
 );
 
-const SignatureCanvas = ({ mobile }) => {
+const SignatureCanvas = ({ mobile, onContextLost }) => {
     const [live, setLive] = useState(true);
     const pack = useMemo(() => createSceneTextures(mobile), [mobile]);
 
@@ -57,14 +58,14 @@ const SignatureCanvas = ({ mobile }) => {
         if (host) io.observe(host);
 
         window.addEventListener("pointermove", onPointer, { passive: true });
-        const refresh = () => ScrollTrigger.refresh();
-        window.addEventListener("load", refresh);
+        refreshScroll();
+        const late = window.setTimeout(refreshScroll, 320);
 
         return () => {
             trigger.kill();
             io.disconnect();
             window.removeEventListener("pointermove", onPointer);
-            window.removeEventListener("load", refresh);
+            window.clearTimeout(late);
             sceneRig.live = false;
         };
     }, [mobile]);
@@ -72,9 +73,12 @@ const SignatureCanvas = ({ mobile }) => {
     return (
         <Canvas
             className="signature-canvas"
+            events={null}
             frameloop={live ? "always" : "never"}
             dpr={mobile ? 1 : [1, 1.5]}
             camera={{ position: [0.12, 0.08, mobile ? 5.55 : 4.85], fov: mobile ? 40 : 35 }}
+            resize={{ debounce: 200, scroll: false }}
+            style={{ pointerEvents: "none", touchAction: "none" }}
             gl={{
                 antialias: !mobile,
                 alpha: true,
@@ -84,10 +88,13 @@ const SignatureCanvas = ({ mobile }) => {
             onCreated={({ gl }) => {
                 gl.setClearColor(0x000000, 0);
                 const canvas = gl.domElement;
+                canvas.style.pointerEvents = "none";
+                canvas.setAttribute("aria-hidden", "true");
                 const onLost = (event) => {
                     event.preventDefault();
                     sceneRig.live = false;
                     setLive(false);
+                    onContextLost?.();
                 };
                 canvas.addEventListener("webglcontextlost", onLost, false);
             }}

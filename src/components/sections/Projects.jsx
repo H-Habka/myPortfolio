@@ -82,6 +82,10 @@ const ProjectCard = ({ project, large = false }) => {
                     src={require(`../../images/projects/${image}`)}
                     className="aspect-square w-full object-cover transition duration-700 group-hover:scale-105"
                     alt={title}
+                    width={400}
+                    height={400}
+                    loading="lazy"
+                    decoding="async"
                 />
             </div>
             <div
@@ -104,17 +108,17 @@ const ProjectCard = ({ project, large = false }) => {
                 <div className="flex flex-wrap gap-2">
                     <a
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         href={github}
-                        className="btn-ghost px-4 py-2 text-sm"
+                        className="btn-ghost tap-target px-4 text-sm"
                     >
                         GitHub
                     </a>
                     <a
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         href={liveDemo}
-                        className="btn-wa px-4 py-2 text-sm"
+                        className="btn-wa tap-target px-4 text-sm"
                     >
                         Live demo
                     </a>

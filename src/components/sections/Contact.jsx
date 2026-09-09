@@ -40,11 +40,12 @@ const Contact = () => {
                         data-reveal
                         href={profile.whatsapp}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
+                        aria-label={`WhatsApp ${profile.name} at ${profile.phone}`}
                         className="surface-card group relative overflow-hidden p-8 transition duration-500 hover:-translate-y-1 sm:p-10"
                     >
                         <div className="absolute -right-8 -top-8 h-36 w-36 rounded-full bg-wa/20 blur-2xl transition group-hover:bg-wa/30" />
-                        <ImWhatsapp className="text-wa" size={32} />
+                        <ImWhatsapp className="text-wa" size={32} aria-hidden />
                         <p className="mt-16 font-display text-4xl text-paper sm:text-5xl">
                             WhatsApp
                         </p>
@@ -54,11 +55,12 @@ const Contact = () => {
                         data-reveal
                         href={profile.linkedin}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
+                        aria-label={`LinkedIn profile of ${profile.name}`}
                         className="surface-card group relative overflow-hidden p-8 transition duration-500 hover:-translate-y-1 sm:p-10"
                     >
                         <div className="absolute -right-8 -top-8 h-36 w-36 rounded-full bg-li/20 blur-2xl transition group-hover:bg-li/30" />
-                        <BsLinkedin className="text-li" size={30} />
+                        <BsLinkedin className="text-li" size={30} aria-hidden />
                         <p className="mt-16 font-display text-4xl text-paper sm:text-5xl">
                             LinkedIn
                         </p>
@@ -82,14 +84,14 @@ const Contact = () => {
                                 </div>
                             </>
                         );
-                        const className = "surface-card flex items-center gap-3 px-5 py-5";
+                        const className = "surface-card flex min-h-[4.5rem] items-center gap-3 px-5 py-5";
                         return channel.href ? (
                             <a
                                 key={channel.label}
                                 data-reveal
                                 href={channel.href}
                                 target={channel.href.startsWith("mailto:") ? undefined : "_blank"}
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                                 className={`${className} transition hover:border-cyan/40`}
                             >
                                 {inner}

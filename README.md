@@ -12,7 +12,7 @@ Primary CTAs: [WhatsApp](https://wa.me/971588930130) and [LinkedIn](https://www.
 
 ## Signature 3D
 
-Hero product stack (dashboard, EasyChat phone, editor, Shopify storefront, stack tokens) built with Three.js, React Three Fiber, and drei. Camera and layout scrub with GSAP ScrollTrigger on the existing Lenis scroll. `prefers-reduced-motion`, Save-Data, or missing WebGL fall back to the 2D stack field.
+Hero product stack (dashboard, EasyChat phone, editor, Shopify storefront, stack tokens) built with Three.js and React Three Fiber. Camera and layout scrub with GSAP ScrollTrigger on the existing Lenis scroll. `prefers-reduced-motion`, Save-Data, or missing WebGL fall back to the 2D stack field. The WebGL canvas is decorative (`pointer-events: none`) so hero and chrome CTAs stay tappable.
 
 ## Scripts
 
