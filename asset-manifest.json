@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/myPortfolio/static/css/main.cd26613c.css",
-    "main.js": "/myPortfolio/static/js/main.7916bc3d.js",
-    "static/js/677.3de361da.chunk.js": "/myPortfolio/static/js/677.3de361da.chunk.js",
-    "static/js/599.4463597c.chunk.js": "/myPortfolio/static/js/599.4463597c.chunk.js",
+    "main.css": "/myPortfolio/static/css/main.881c16d2.css",
+    "main.js": "/myPortfolio/static/js/main.673e06bf.js",
+    "static/js/632.56717908.chunk.js": "/myPortfolio/static/js/632.56717908.chunk.js",
+    "static/js/801.c64e6bf3.chunk.js": "/myPortfolio/static/js/801.c64e6bf3.chunk.js",
     "static/media/portfolio.webp": "/myPortfolio/static/media/portfolio.b9ae5eeb580966468489.webp",
     "static/media/youtubeClone.webp": "/myPortfolio/static/media/youtubeClone.090ba99c60da0cc9ddf7.webp",
     "static/media/crown-clothing.webp": "/myPortfolio/static/media/crown-clothing.9683b92ff6215e8d260f.webp",
@@ -16,14 +16,10 @@
     "static/media/Tip-calculator-app.webp": "/myPortfolio/static/media/Tip-calculator-app.203fd0ed15f95f581f5e.webp",
     "static/media/Expenses-chart.webp": "/myPortfolio/static/media/Expenses-chart.a887b3806076bd97ee31.webp",
     "static/media/advice-generator.webp": "/myPortfolio/static/media/advice-generator.0e1edaaaa38a59be5987.webp",
-    "index.html": "/myPortfolio/index.html",
-    "main.cd26613c.css.map": "/myPortfolio/static/css/main.cd26613c.css.map",
-    "main.7916bc3d.js.map": "/myPortfolio/static/js/main.7916bc3d.js.map",
-    "677.3de361da.chunk.js.map": "/myPortfolio/static/js/677.3de361da.chunk.js.map",
-    "599.4463597c.chunk.js.map": "/myPortfolio/static/js/599.4463597c.chunk.js.map"
+    "index.html": "/myPortfolio/index.html"
   },
   "entrypoints": [
-    "static/css/main.cd26613c.css",
-    "static/js/main.7916bc3d.js"
+    "static/css/main.881c16d2.css",
+    "static/js/main.673e06bf.js"
   ]
 }
