@@ -46,7 +46,7 @@ const Hero = () => {
             className="relative flex min-h-screen w-full flex-col justify-center overflow-x-clip px-5 pb-32 pt-28 sm:px-8"
         >
             <div className="section-inner grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10">
-                <div className="relative z-20 flex min-h-[calc(100svh-9rem)] flex-col justify-center lg:min-h-0">
+                <div className="relative z-20 flex flex-col justify-center">
                     <p data-hero="kicker" className="section-kicker">
                         {hero.kicker}
                     </p>

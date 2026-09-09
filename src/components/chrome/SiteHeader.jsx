@@ -54,7 +54,7 @@ const SiteHeader = () => {
                         className="btn-wa tap-target px-3 text-xs sm:px-4 sm:text-sm"
                     >
                         <ImWhatsapp size={15} aria-hidden />
-                        <span className="hidden min-[380px]:inline">WhatsApp</span>
+                        <span className="hidden sm:inline">WhatsApp</span>
                     </a>
                     <a
                         href={profile.linkedin}
@@ -64,7 +64,7 @@ const SiteHeader = () => {
                         className="btn-li tap-target px-3 text-xs sm:px-4 sm:text-sm"
                     >
                         <BsLinkedin size={14} aria-hidden />
-                        <span className="hidden min-[380px]:inline">LinkedIn</span>
+                        <span className="hidden sm:inline">LinkedIn</span>
                     </a>
                 </div>
             </div>
