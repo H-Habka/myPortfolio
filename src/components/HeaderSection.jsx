@@ -1,96 +1,121 @@
 import React from "react";
-import { BsGithub, BsLinkedin, BsFacebook } from "react-icons/bs";
-import { FaHandPointDown } from "react-icons/fa";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { GoMail } from "react-icons/go";
+import { ImWhatsapp } from "react-icons/im";
+import { profile } from "../content/identity";
+import { publicUrl } from "../utils/publicUrl";
 
 const HeaderSection = () => {
     return (
         <section
             id="home"
-            className="relative flex min-h-screen w-full flex-col justify-center px-5 sm:px-8 pt-16 pb-28"
+            className="relative flex min-h-screen w-full flex-col justify-center px-5 sm:px-8 pt-28 pb-24"
         >
-            <div className="section-inner grid items-center gap-10 md:grid-cols-[1.1fr_0.9fr] md:gap-16">
-                <div className="flex flex-col items-center text-center md:items-start md:text-left">
+            <div className="section-inner grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+                <div className="flex flex-col items-start">
                     <p
                         data-aos="fade-up"
-                        data-aos-delay="80"
                         className="section-kicker"
                     >
-                        Hello I'm
+                        {profile.location}
                     </p>
                     <h1
                         data-aos="fade-up"
-                        data-aos-delay="180"
-                        className="font-display mt-3 text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl"
+                        data-aos-delay="120"
+                        className="font-display mt-4 text-6xl font-extrabold leading-[0.88] tracking-tight sm:text-7xl lg:text-8xl"
                     >
-                        Hossien Habka
+                        <span className="gold-sheen block">
+                            {profile.firstName}
+                        </span>
+                        <span className="block text-five">
+                            {profile.lastName}
+                        </span>
                     </h1>
                     <p
                         data-aos="fade-up"
-                        data-aos-delay="280"
-                        className="mt-4 text-lg text-three sm:text-xl"
+                        data-aos-delay="200"
+                        className="mt-6 max-w-xl text-lg text-four sm:text-xl"
                     >
-                        FrontEnd Developer
+                        {profile.title}
                     </p>
-                    <div className="mt-8 flex items-center gap-3">
+                    <p
+                        data-aos="fade-up"
+                        data-aos-delay="260"
+                        className="mt-4 max-w-xl text-sm leading-7 text-muted sm:text-base"
+                    >
+                        Sole engineer at{" "}
+                        <span className="font-semibold text-three">
+                            EasySales
+                        </span>
+                        . Shopify and jewelry photography at{" "}
+                        <span className="font-semibold text-three">
+                            Saray Jewellery
+                        </span>
+                        .
+                    </p>
+                    <div
+                        data-aos="fade-up"
+                        data-aos-delay="320"
+                        className="mt-8 flex flex-wrap items-center gap-3"
+                    >
                         <a
-                            data-aos="fade-up"
-                            data-aos-delay="360"
-                            href="https://github.com/H-Habka"
+                            href={profile.whatsapp}
                             target="_blank"
                             rel="noreferrer"
-                            aria-label="GitHub"
-                            className="icon-link"
+                            className="btn-primary gap-2"
                         >
-                            <BsGithub size={20} />
+                            <ImWhatsapp size={18} />
+                            WhatsApp · {profile.phone}
                         </a>
                         <a
-                            data-aos="fade-up"
-                            data-aos-delay="440"
-                            href="https://www.linkedin.com/in/hossien-habka-b67069229/"
+                            href={profile.linkedin}
                             target="_blank"
                             rel="noreferrer"
-                            aria-label="LinkedIn"
-                            className="icon-link"
+                            className="btn-linkedin gap-2"
                         >
-                            <BsLinkedin size={20} />
+                            <BsLinkedin size={16} />
+                            LinkedIn
+                        </a>
+                    </div>
+                    <div
+                        data-aos="fade-up"
+                        data-aos-delay="400"
+                        className="mt-6 flex flex-wrap items-center gap-4 text-sm text-muted"
+                    >
+                        <a
+                            href={`mailto:${profile.email}`}
+                            className="inline-flex items-center gap-2 transition hover:text-three"
+                        >
+                            <GoMail size={16} />
+                            {profile.email}
                         </a>
                         <a
-                            data-aos="fade-up"
-                            data-aos-delay="520"
-                            href="https://www.facebook.com/profile.php?id=100021919424493"
+                            href={profile.github}
                             target="_blank"
                             rel="noreferrer"
-                            aria-label="Facebook"
-                            className="icon-link"
+                            className="inline-flex items-center gap-2 transition hover:text-three"
                         >
-                            <BsFacebook size={20} />
+                            <BsGithub size={16} />
+                            GitHub
                         </a>
                     </div>
                 </div>
                 <div
                     data-aos="zoom-in"
-                    data-aos-delay="240"
-                    className="relative mx-auto w-[260px] sm:w-[300px] lg:w-[340px]"
+                    data-aos-delay="180"
+                    className="relative mx-auto w-[260px] sm:w-[320px] lg:w-[380px]"
                 >
-                    <div className="absolute -inset-6 rounded-full bg-two/20 blur-3xl" />
-                    <div className="relative overflow-hidden rounded-t-full bg-gradient-to-b from-two/80 to-transparent shadow-glow">
+                    <div className="absolute -inset-8 rounded-full bg-two/20 blur-3xl" />
+                    <div className="portrait-ring absolute -inset-2 rounded-full opacity-80" />
+                    <div className="relative overflow-hidden rounded-full border border-white/10 bg-one shadow-glow">
                         <img
-                            src={require("../images/Post.webp")}
-                            alt="profile"
-                            className="relative w-full"
+                            src={publicUrl(profile.photo)}
+                            alt={`${profile.name}, ${profile.title}`}
+                            className="relative aspect-[4/5] w-full object-cover object-top"
                         />
                     </div>
                 </div>
             </div>
-            <a
-                data-aos="fade-down"
-                data-aos-delay="700"
-                href="#about"
-                className="mx-auto mt-10 text-two transition duration-300 hover:text-three md:absolute md:bottom-24 md:left-1/2 md:mt-0 md:-translate-x-1/2"
-                aria-label="Scroll to about"
-            >
-                <FaHandPointDown size={28} className="animate-bounce" />
-            </a>
         </section>
     );
 };

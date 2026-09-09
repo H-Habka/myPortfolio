@@ -7,8 +7,8 @@ const RecentWorkSection = () => {
         <section id="RecentWork" className="section-wrap">
             <div className="section-inner">
                 <div data-aos="fade-up" className="section-heading">
-                    <div className="section-kicker">My recent Work</div>
-                    <div className="section-title">Portfolio</div>
+                    <div className="section-kicker">Selected personal work</div>
+                    <div className="section-title">Projects</div>
                     <div className="section-rule" />
                 </div>
                 <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
