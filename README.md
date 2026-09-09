@@ -4,6 +4,12 @@ Personal site for **Hossien Habka**, Full-Stack Web & Application Developer (Al 
 
 Live: https://h-habka.github.io/myPortfolio/
 
+## Homepage
+
+`hero → about → experience → skills → projects → contact`
+
+Primary CTAs: [WhatsApp](https://wa.me/971588930130) and [LinkedIn](https://www.linkedin.com/in/hossien-habka-b67069229).
+
 ## Scripts
 
 - `npm start` — local dev server
