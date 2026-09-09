@@ -1,12 +1,10 @@
 {
   "files": {
-    "main.css": "/myPortfolio/static/css/main.14a29ab0.css",
-    "main.js": "/myPortfolio/static/js/main.f8c1e323.js",
+    "main.css": "/myPortfolio/static/css/main.b70497f7.css",
+    "main.js": "/myPortfolio/static/js/main.c256b47d.js",
     "static/media/portfolio.webp": "/myPortfolio/static/media/portfolio.b9ae5eeb580966468489.webp",
     "static/media/youtubeClone.webp": "/myPortfolio/static/media/youtubeClone.090ba99c60da0cc9ddf7.webp",
     "static/media/crown-clothing.webp": "/myPortfolio/static/media/crown-clothing.9683b92ff6215e8d260f.webp",
-    "static/media/Post.webp": "/myPortfolio/static/media/Post.8f32cfc0129fdab99e0b.webp",
-    "static/media/aboutme.webp": "/myPortfolio/static/media/aboutme.f1cf28f69e6e44511f91.webp",
     "static/media/monster-rolodex.webp": "/myPortfolio/static/media/monster-rolodex.b40f6e8ee706869825a4.webp",
     "static/media/Product-preview-card.webp": "/myPortfolio/static/media/Product-preview-card.81d51214b39e50b2c4c1.webp",
     "static/media/gymWebSite.webp": "/myPortfolio/static/media/gymWebSite.dd69c3f74ef3530205cc.webp",
@@ -17,11 +15,11 @@
     "static/media/Expenses-chart.webp": "/myPortfolio/static/media/Expenses-chart.a887b3806076bd97ee31.webp",
     "static/media/advice-generator.webp": "/myPortfolio/static/media/advice-generator.0e1edaaaa38a59be5987.webp",
     "index.html": "/myPortfolio/index.html",
-    "main.14a29ab0.css.map": "/myPortfolio/static/css/main.14a29ab0.css.map",
-    "main.f8c1e323.js.map": "/myPortfolio/static/js/main.f8c1e323.js.map"
+    "main.b70497f7.css.map": "/myPortfolio/static/css/main.b70497f7.css.map",
+    "main.c256b47d.js.map": "/myPortfolio/static/js/main.c256b47d.js.map"
   },
   "entrypoints": [
-    "static/css/main.14a29ab0.css",
-    "static/js/main.f8c1e323.js"
+    "static/css/main.b70497f7.css",
+    "static/js/main.c256b47d.js"
   ]
 }
