@@ -1,8 +1,9 @@
-export { default as HeaderSection } from "./HeaderSection";
-export { default as AboutMeSection } from "./AboutMeSection";
-export { default as ContactSection } from "./ContactSection/ContactSection";
-export { default as ExperienceSection } from "./ExperienceSection/ExperienceSection";
-export { default as FloatingNavLink } from "./FloatingNavLink/FloatingNavLink";
-export { default as RecentWorkSection } from "./RecentWorkSection/RecentWorkSection";
-export { default as TopBar } from "./TopBar";
-export { default as CompanyBand } from "./CompanyBand";
+export { default as Hero } from "./sections/Hero";
+export { default as About } from "./sections/About";
+export { default as Experience } from "./sections/Experience";
+export { default as Skills } from "./sections/Skills";
+export { default as Projects } from "./sections/Projects";
+export { default as Contact } from "./sections/Contact";
+export { default as SiteHeader } from "./chrome/SiteHeader";
+export { default as SectionNav } from "./chrome/SectionNav";
+export { default as SiteFooter } from "./chrome/SiteFooter";
