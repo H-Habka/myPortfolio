@@ -2,6 +2,7 @@ import React from "react";
 import { shipped } from "../../content/identity";
 import { projects } from "../../projects";
 import SectionHeading from "../ui/SectionHeading";
+import StackField from "../visual/StackField";
 
 const ProjectCard = ({ project, large = false }) => {
     const { title, liveDemo, github, language, image } = project;
@@ -63,21 +64,26 @@ const Projects = () => {
 
                 <article
                     data-reveal
-                    className="surface-card relative mt-16 overflow-hidden p-8 sm:p-10"
+                    className="surface-card relative mt-16 overflow-hidden p-8 sm:grid sm:grid-cols-[1.1fr_0.9fr] sm:items-center sm:p-10"
                 >
                     <div className="pointer-events-none absolute -right-8 top-0 h-56 w-56 rounded-full bg-cyan/10 blur-3xl" />
-                    <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-cyan">
-                        Featured product
-                    </p>
-                    <h3 className="mt-4 font-display text-5xl text-paper sm:text-6xl">
-                        {easychat.title}
-                    </h3>
-                    <p className="mt-3 text-lg text-paper/85">
-                        {easychat.company} · {easychat.language}
-                    </p>
-                    <p className="mt-4 max-w-xl text-sm leading-7 text-muted">
-                        {easychat.blurb}
-                    </p>
+                    <div className="relative">
+                        <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-cyan">
+                            Featured product
+                        </p>
+                        <h3 className="mt-4 font-display text-5xl text-paper sm:text-6xl">
+                            {easychat.title}
+                        </h3>
+                        <p className="mt-3 text-lg text-paper/85">
+                            {easychat.company} · {easychat.language}
+                        </p>
+                        <p className="mt-4 max-w-xl text-sm leading-7 text-muted">
+                            {easychat.blurb}
+                        </p>
+                    </div>
+                    <div className="pointer-events-none relative mx-auto mt-8 hidden h-52 w-full max-w-md sm:mt-0 sm:block">
+                        <StackField />
+                    </div>
                 </article>
 
                 <div className="mt-5">

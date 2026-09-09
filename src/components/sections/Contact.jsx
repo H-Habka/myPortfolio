@@ -29,7 +29,7 @@ const secondary = [
 
 const Contact = () => {
     return (
-        <section id="contact" className="section-wrap pb-20">
+        <section id="contact" className="section-wrap pb-36">
             <div className="section-inner">
                 <SectionHeading index={5} kicker="Contact" title="Let’s build the next one.">
                     WhatsApp and LinkedIn first. Email, GitHub, and Al Ain / Abu Dhabi if you prefer another path.

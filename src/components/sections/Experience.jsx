@@ -62,9 +62,11 @@ const Experience = () => {
                             <p className="relative mt-3 text-lg font-semibold text-paper">
                                 {item.title}
                             </p>
-                            <p className="relative mt-1 text-sm text-muted">
-                                {[item.location, item.dates].filter(Boolean).join(" · ")}
-                            </p>
+                            {item.location ? (
+                                <p className="relative mt-1 text-sm text-muted">
+                                    {item.location}
+                                </p>
+                            ) : null}
                             {item.teaser ? (
                                 <p className="relative mt-5 max-w-md text-sm leading-7 text-paper/80">
                                     {item.teaser}

@@ -140,6 +140,11 @@ code {
 @layer components {
     .section-wrap {
         @apply relative w-full px-5 sm:px-8 py-24 md:py-32;
+        scroll-margin-top: 5.5rem;
+    }
+
+    #home {
+        scroll-margin-top: 0;
     }
 
     .section-inner {
@@ -227,6 +232,7 @@ code {
     }
 
     .name-sheen {
+        color: #e8f1f8;
         background: linear-gradient(
             110deg,
             #e8f1f8 0%,

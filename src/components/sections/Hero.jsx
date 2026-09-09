@@ -19,11 +19,7 @@ const Hero = () => {
             const timeline = gsap.timeline({ defaults: { ease: "power3.out" } });
             timeline
                 .from("[data-hero='kicker']", { y: 16, opacity: 0, duration: 0.7 })
-                .from(
-                    "[data-hero='letter']",
-                    { y: 80, opacity: 0, rotateX: 28, stagger: 0.035, duration: 0.85 },
-                    "-=0.2"
-                )
+                .from("[data-hero='name']", { y: 48, opacity: 0, duration: 0.95, stagger: 0.08 }, "-=0.15")
                 .from("[data-hero='copy']", { y: 24, opacity: 0, duration: 0.7, stagger: 0.08 }, "-=0.45")
                 .from("[data-hero='portrait']", { scale: 0.92, opacity: 0, duration: 1.1 }, "-=0.7")
                 .from("[data-hero='field']", { opacity: 0, duration: 1.2 }, "-=0.9");
@@ -35,35 +31,19 @@ const Hero = () => {
         <section
             id="home"
             ref={root}
-            className="relative flex min-h-screen w-full flex-col justify-center px-5 pb-20 pt-28 sm:px-8"
+            className="relative flex min-h-screen w-full flex-col justify-center px-5 pb-32 pt-28 sm:px-8"
         >
             <div className="section-inner grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10">
-                <div>
+                <div className="flex min-h-[calc(100svh-9rem)] flex-col justify-center lg:min-h-0">
                     <p data-hero="kicker" className="section-kicker">
                         {hero.kicker}
                     </p>
-                    <h1 className="mt-5 font-display text-[22vw] leading-[0.78] tracking-tight sm:text-[7.5rem] lg:text-[8.75rem]">
-                        <span className="name-sheen block">
-                            {profile.firstName.split("").map((letter, index) => (
-                                <span
-                                    data-hero="letter"
-                                    key={`${letter}-${index}`}
-                                    className="inline-block"
-                                >
-                                    {letter}
-                                </span>
-                            ))}
+                    <h1 className="mt-5 font-display text-[clamp(3.6rem,16vw,8.75rem)] leading-[0.8] tracking-tight">
+                        <span data-hero="name" className="name-sheen block">
+                            {profile.firstName}
                         </span>
-                        <span className="mt-1 block italic text-paper/90">
-                            {profile.lastName.split("").map((letter, index) => (
-                                <span
-                                    data-hero="letter"
-                                    key={`${letter}-${index}`}
-                                    className="inline-block"
-                                >
-                                    {letter}
-                                </span>
-                            ))}
+                        <span data-hero="name" className="mt-1 block italic text-paper">
+                            {profile.lastName}
                         </span>
                     </h1>
                     <p
@@ -138,7 +118,7 @@ const Hero = () => {
                     >
                         <StackField />
                     </div>
-                    <div data-hero="portrait" className="portrait-frame relative mx-auto w-[250px] sm:w-[300px] lg:w-[320px]">
+                    <div data-hero="portrait" className="portrait-frame relative mx-auto mb-16 w-[250px] sm:mb-0 sm:w-[300px] lg:w-[320px]">
                         <div className="absolute -inset-8 rounded-[2rem] bg-cyan/20 blur-3xl" />
                         <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-navy shadow-glow">
                             <img
