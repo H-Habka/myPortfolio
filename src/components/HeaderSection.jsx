@@ -1,6 +1,8 @@
 import React from "react";
-import { BsGithub, BsLinkedin, BsFacebook } from "react-icons/bs";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaHandPointDown } from "react-icons/fa";
+import { profile } from "../content/identity";
+import { publicUrl } from "../utils/publicUrl";
 
 const HeaderSection = () => {
     return (
@@ -15,27 +17,34 @@ const HeaderSection = () => {
                         data-aos-delay="80"
                         className="section-kicker"
                     >
-                        Hello I'm
+                        Hello, I&apos;m
                     </p>
                     <h1
                         data-aos="fade-up"
                         data-aos-delay="180"
                         className="font-display mt-3 text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl"
                     >
-                        Hossien Habka
+                        {profile.name}
                     </h1>
                     <p
                         data-aos="fade-up"
                         data-aos-delay="280"
                         className="mt-4 text-lg text-three sm:text-xl"
                     >
-                        FrontEnd Developer
+                        {profile.title}
+                    </p>
+                    <p
+                        data-aos="fade-up"
+                        data-aos-delay="320"
+                        className="mt-2 text-sm text-muted sm:text-base"
+                    >
+                        {profile.location}
                     </p>
                     <div className="mt-8 flex items-center gap-3">
                         <a
                             data-aos="fade-up"
                             data-aos-delay="360"
-                            href="https://github.com/H-Habka"
+                            href={profile.github}
                             target="_blank"
                             rel="noreferrer"
                             aria-label="GitHub"
@@ -46,24 +55,13 @@ const HeaderSection = () => {
                         <a
                             data-aos="fade-up"
                             data-aos-delay="440"
-                            href="https://www.linkedin.com/in/hossien-habka-b67069229/"
+                            href={profile.linkedin}
                             target="_blank"
                             rel="noreferrer"
                             aria-label="LinkedIn"
                             className="icon-link"
                         >
                             <BsLinkedin size={20} />
-                        </a>
-                        <a
-                            data-aos="fade-up"
-                            data-aos-delay="520"
-                            href="https://www.facebook.com/profile.php?id=100021919424493"
-                            target="_blank"
-                            rel="noreferrer"
-                            aria-label="Facebook"
-                            className="icon-link"
-                        >
-                            <BsFacebook size={20} />
                         </a>
                     </div>
                 </div>
@@ -75,9 +73,9 @@ const HeaderSection = () => {
                     <div className="absolute -inset-6 rounded-full bg-two/20 blur-3xl" />
                     <div className="relative overflow-hidden rounded-t-full bg-gradient-to-b from-two/80 to-transparent shadow-glow">
                         <img
-                            src={require("../images/Post.webp")}
-                            alt="profile"
-                            className="relative w-full"
+                            src={publicUrl(profile.photo)}
+                            alt={`${profile.name}, ${profile.title}`}
+                            className="relative w-full object-cover object-top"
                         />
                     </div>
                 </div>

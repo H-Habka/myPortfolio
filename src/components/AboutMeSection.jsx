@@ -1,25 +1,27 @@
 import React from "react";
 import { AiOutlineProject } from "react-icons/ai";
-import { MdPeopleOutline } from "react-icons/md";
+import { MdLocationOn } from "react-icons/md";
 import { FaMedal } from "react-icons/fa";
+import { education, profile } from "../content/identity";
+import { publicUrl } from "../utils/publicUrl";
 
 const stats = [
     {
         icon: FaMedal,
-        label: "Experince",
-        value: "+4 year",
+        label: "Experience",
+        value: "4+ years",
         delay: "0",
     },
     {
-        icon: MdPeopleOutline,
-        label: "Followers",
-        value: "+1000 followers",
+        icon: MdLocationOn,
+        label: "Based in",
+        value: "Al Ain / Abu Dhabi",
         delay: "120",
     },
     {
         icon: AiOutlineProject,
-        label: "Projetcs",
-        value: "+40 Completed",
+        label: "Current role",
+        value: "Sole engineer, EasySales",
         delay: "240",
     },
 ];
@@ -29,7 +31,7 @@ const AboutMeSection = () => {
         <section id="about" className="section-wrap">
             <div className="section-inner">
                 <div data-aos="fade-up" className="section-heading">
-                    <div className="section-kicker">Get To Know</div>
+                    <div className="section-kicker">Get to know</div>
                     <div className="section-title">About Me</div>
                     <div className="section-rule" />
                 </div>
@@ -40,9 +42,9 @@ const AboutMeSection = () => {
                     >
                         <div className="absolute left-4 top-4 h-full w-full rounded-3xl border border-two/40 bg-two/25" />
                         <img
-                            src={require("../images/aboutme.webp")}
-                            alt="Hossien Habka"
-                            className="relative h-[320px] w-60 rounded-3xl object-cover shadow-card transition duration-500 ease-out hover:-translate-y-1"
+                            src={publicUrl(profile.photo)}
+                            alt={profile.name}
+                            className="relative h-[320px] w-60 rounded-3xl object-cover object-top shadow-card transition duration-500 ease-out hover:-translate-y-1"
                         />
                     </div>
                     <div className="flex flex-col gap-8">
@@ -71,46 +73,19 @@ const AboutMeSection = () => {
                             data-aos="fade-up"
                             className="space-y-4 text-left text-sm leading-7 text-five sm:text-base sm:leading-8"
                         >
+                            <p>{profile.summary}</p>
                             <p>
-                                I am a FrontEnd Developer Fully Able to Work
-                                Under Work and Time Preasure, I Can Handle Any{" "}
+                                {education.degree}, {education.school} (
+                                {education.dates}).{" "}
                                 <span className="font-semibold text-four">
-                                    Problem Solving
-                                </span>{" "}
-                                Issues, Able to Write Clean and Managable Code.
-                                well acquainted with{" "}
-                                <span className="font-semibold text-four">
-                                    SOLID
-                                </span>{" "}
-                                Principles and{" "}
-                                <span className="font-semibold text-four">
-                                    Design Patterns
-                                </span>
-                                ,worked on multiple sites such as{" "}
-                                <span className="font-semibold text-four">
-                                    CMS
-                                </span>
-                                , and I Have alot Of Experience of working with
-                                a Team.
-                            </p>
-                            <p>
-                                I Achieved{" "}
-                                <span className="font-semibold text-four">
-                                    Albasel Award
-                                </span>{" "}
-                                Four Times in my Study as Being in the First
-                                Three Places, I Achieved the First Place in my
-                                First, Second, Fourth and Fifth Year and i
-                                Graduated With Graduation Rate of{" "}
-                                <span className="font-semibold text-four">
-                                    91.1%
+                                    {education.note}
                                 </span>
                                 .
                             </p>
                         </div>
                         <div data-aos="fade-up">
                             <a href="#Contact" className="btn-primary">
-                                Let's Talk
+                                Let&apos;s Talk
                             </a>
                         </div>
                     </div>
