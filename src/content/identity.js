@@ -67,7 +67,7 @@ export const education = {
         },
         {
             title: "SCPC",
-            detail: "Named on the CV alongside the Tartus degree.",
+            detail: "Listed with the Tartus University degree.",
         },
     ],
     projects: [
@@ -137,7 +137,7 @@ export const work = [
         dates: "Sep 2022 – Feb 2023",
         highlights: [
             "Independent frontend work.",
-            "Built a booking site — no public URL on the CV.",
+            "Built a booking site.",
         ],
         stack: ["Frontend", "Booking site"],
     },
@@ -246,7 +246,7 @@ export const cases = [
         role: "Sole engineer",
         language: "React Native",
         featured: true,
-        blurb: "React Native app, shipped to the Play Store and App Store. Store listings are named on the CV; no store URLs are published here.",
+        blurb: "React Native app, shipped to the Play Store and App Store. Store listings are named here without public store links.",
         highlights: [
             "Built and shipped as the sole engineer at EasySales.",
             "React Native.",
@@ -261,7 +261,7 @@ export const cases = [
         company: "EasySales",
         role: "Sole engineer",
         language: "Shopify",
-        blurb: "Dawn theme work plus a private Shopify app — Liquid and custom app surface in the same EasySales seat. No public store URL on the CV.",
+        blurb: "Dawn theme work plus a private Shopify app — Liquid and custom app surface in the same EasySales seat. No public store link is published.",
         highlights: [
             "Shopify Dawn theme.",
             "Private / custom Shopify app.",
@@ -276,7 +276,7 @@ export const cases = [
         company: "Saray Jewellery",
         role: "Shopify store dev/admin · photographer",
         language: "Shopify",
-        blurb: "Store development and administration, jewelry photography, and payments through Stripe and Tabby. No public store URL on the CV.",
+        blurb: "Store development and administration, jewelry photography, and payments through Stripe and Tabby. No public store link is published.",
         highlights: [
             "Shopify store development and administration.",
             "Jewelry photography.",
@@ -290,10 +290,10 @@ export const cases = [
         title: "Booking site",
         role: "Frontend Developer Freelancer",
         language: "Frontend",
-        blurb: "A booking site built during independent frontend work (Sep 2022 – Feb 2023). No live URL is listed on the CV.",
+        blurb: "A booking site built during independent frontend work (Sep 2022 – Feb 2023). No public live link is published.",
         highlights: [
             "Freelance frontend engagement.",
-            "Booking site — unpublished URL.",
+            "Booking site.",
         ],
         stack: ["Frontend", "Booking"],
     },
@@ -303,7 +303,7 @@ export const cases = [
         title: "IoT virtual lab",
         company: "Tartus University",
         language: "IoT",
-        blurb: "Academic IoT virtual lab during the Computer and Electronic Systems degree. Hardware skills on the CV include Arduino and Raspberry Pi.",
+        blurb: "Academic IoT virtual lab during the Computer and Electronic Systems degree. Hardware skills include Arduino and Raspberry Pi.",
         highlights: [
             "IoT virtual lab at Tartus University.",
             "Arduino and Raspberry Pi are listed as skills.",
@@ -316,7 +316,7 @@ export const cases = [
         title: "NLP fake news project",
         company: "Tartus University",
         language: "NLP",
-        blurb: "Academic NLP project on fake news, completed during the Tartus degree. No public repo URL on the CV.",
+        blurb: "Academic NLP project on fake news, completed during the Tartus degree. No public repo link is published.",
         highlights: ["NLP fake news project.", "Part of the 2017–2022 degree."],
         stack: ["NLP"],
     },

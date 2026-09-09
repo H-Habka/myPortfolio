@@ -90,10 +90,8 @@ const SkillOrbit = () => {
                             <circle
                                 cx={node.x}
                                 cy={node.y}
-                                r={isActive ? 9 : 5.5}
-                                fill={isActive ? "#3EE0D0" : "#162536"}
-                                stroke={isActive ? "#3EE0D0" : "#5B8CFF"}
-                                strokeOpacity={isActive ? 1 : 0.7}
+                                r="16"
+                                fill="transparent"
                                 className="cursor-pointer"
                                 onMouseEnter={() => setActive(node.name)}
                                 onFocus={() => setActive(node.name)}
@@ -103,18 +101,29 @@ const SkillOrbit = () => {
                                 aria-label={node.name}
                                 aria-pressed={isActive}
                             />
-                            <text
-                                x={node.x}
-                                y={node.y + (node.y < CY ? -16 : 22)}
-                                textAnchor="middle"
-                                fill={isActive ? "#e8f1f8" : "#8aa0b5"}
-                                fontSize="10"
-                                fontFamily="IBM Plex Mono, monospace"
-                                className="pointer-events-none uppercase"
-                                letterSpacing="0.12em"
-                            >
-                                {node.name}
-                            </text>
+                            <circle
+                                cx={node.x}
+                                cy={node.y}
+                                r={isActive ? 9 : 5.5}
+                                fill={isActive ? "#3EE0D0" : "#162536"}
+                                stroke={isActive ? "#3EE0D0" : "#5B8CFF"}
+                                strokeOpacity={isActive ? 1 : 0.7}
+                                className="pointer-events-none"
+                            />
+                            {isActive ? (
+                                <text
+                                    x={node.x}
+                                    y={node.y + (node.y < CY ? -16 : 22)}
+                                    textAnchor="middle"
+                                    fill="#e8f1f8"
+                                    fontSize="10"
+                                    fontFamily="IBM Plex Mono, monospace"
+                                    className="pointer-events-none uppercase"
+                                    letterSpacing="0.14em"
+                                >
+                                    {node.name}
+                                </text>
+                            ) : null}
                         </g>
                     );
                 })}
