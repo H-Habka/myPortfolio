@@ -15,7 +15,7 @@ const About = () => {
         <section id="about" className="section-wrap">
             <div className="section-inner">
                 <SectionHeading index={1} kicker="About" title="The operator behind the stack.">
-                    Four years across web, mobile, and commerce — currently the sole engineer at EasySales.
+                    Four years across web, mobile, commerce, and DevOps — currently the sole engineer and server administrator at EasySales.
                 </SectionHeading>
 
                 <div className="mt-16 grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
@@ -36,7 +36,7 @@ const About = () => {
                                 <p key={paragraph}>{paragraph}</p>
                             ))}
                         </div>
-                        <div className="grid gap-3 sm:grid-cols-3">
+                        <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
                             {aboutCopy.pillars.map((pillar) => (
                                 <div key={pillar.label} data-reveal className="surface-card px-4 py-5">
                                     <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-cyan">

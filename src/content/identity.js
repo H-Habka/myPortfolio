@@ -16,7 +16,7 @@ export const profile = {
     photo: "images/linkedin-profile-photo.png",
     photoDisplay: "images/linkedin-profile-photo-720.webp",
     summary:
-        "Full-stack developer with 4+ years across frontend, backend, React Native, and databases. Sole engineer at EasySales — React/Next.js dashboards, React Native mobile, and Shopify Liquid/private apps. Previously Jewelry Photographer and Shopify store developer at Saray Jewellery. Focused on SEO, Core Web Vitals, and UX. Work in Agile with SOLID and OWASP in mind; AI-assisted with Cursor and ChatGPT.",
+        "Full-stack developer with 4+ years across frontend, backend, React Native, databases, and DevOps. Sole engineer and server administrator at EasySales — React/Next.js dashboards, React Native mobile, Shopify Liquid/private apps, and the servers in that seat. Previously Jewelry Photographer and Shopify store developer at Saray Jewellery. Focused on SEO, Core Web Vitals, and UX. Work in Agile with SOLID and OWASP in mind; AI-assisted with Cursor and ChatGPT.",
 };
 
 export const nav = [
@@ -30,15 +30,15 @@ export const nav = [
 
 export const hero = {
     kicker: "Al Ain / Abu Dhabi, UAE",
-    lede: "Sole engineer at EasySales. Previously Shopify and jewelry photography at Saray Jewellery.",
-    chips: ["React", "Next.js", "React Native", "Shopify", "Node.js"],
+    lede: "Sole engineer and server administrator at EasySales. Previously Shopify and jewelry photography at Saray Jewellery.",
+    chips: ["React", "Next.js", "React Native", "Shopify", "Node.js", "DevOps"],
 };
 
 export const aboutCopy = {
-    pull: "Sole engineer at EasySales — dashboards, mobile, and commerce in one seat.",
+    pull: "Sole engineer and server administrator at EasySales — dashboards, mobile, commerce, and DevOps in one seat.",
     paragraphs: [
-        "Full-stack developer with 4+ years across frontend, backend, React Native, and databases.",
-        "At EasySales I ship React/Next.js dashboards, React Native mobile, and Shopify Liquid/private apps. Before that I was Jewelry Photographer and Shopify store developer at Saray Jewellery — store work there included Stripe and Tabby.",
+        "Full-stack developer with 4+ years across frontend, backend, React Native, databases, and DevOps.",
+        "At EasySales I ship React/Next.js dashboards, React Native mobile, and Shopify Liquid/private apps, and I administer the servers. Before that I was Jewelry Photographer and Shopify store developer at Saray Jewellery — store work there included Stripe and Tabby.",
         "Focused on SEO, Core Web Vitals, and UX. Work in Agile with SOLID and OWASP in mind; AI-assisted with Cursor and ChatGPT.",
         "B.Eng in Computer and Electronic Systems from Tartus University (2017–2022), top of class at 91.11%. Al-Basel awards, SCPC, an IoT virtual lab, and an NLP fake news project sit on that path. Hardware side of the stack includes Arduino and Raspberry Pi.",
     ],
@@ -46,13 +46,14 @@ export const aboutCopy = {
         { label: "Web", detail: "React / Next.js dashboards" },
         { label: "Mobile", detail: "React Native applications" },
         { label: "Commerce", detail: "Shopify Liquid & private apps" },
+        { label: "DevOps", detail: "Server administration" },
     ],
 };
 
 export const stats = [
     { label: "Experience", value: "4+", unit: "years" },
     { label: "Based in", value: "UAE", unit: "Al Ain / Abu Dhabi" },
-    { label: "Now", value: "EasySales", unit: "Sole engineer" },
+    { label: "Now", value: "EasySales", unit: "Sole engineer · Server admin" },
     { label: "Recently", value: "Saray", unit: "Jewellery" },
 ];
 
@@ -86,15 +87,15 @@ export const education = {
 export const work = [
     {
         id: "easysales",
-        title: "IT Applications Manager",
+        title: "IT Applications Manager & Server Administrator",
         company: "EasySales",
         location: "Abu Dhabi",
         dates: "Feb 2025 – Present",
         featured: true,
         teaser:
-            "Sole engineer — EasyChat (React Native) on the Play Store and App Store; Shopify Dawn + private app.",
+            "Sole engineer and server administrator — EasyChat (React Native) on the Play Store and App Store; Shopify Dawn + private app.",
         highlights: [
-            "Sole engineer across React/Next.js dashboards, React Native mobile, and Shopify.",
+            "Sole engineer and server administrator across React/Next.js dashboards, React Native mobile, Shopify, and DevOps.",
             "Shipped EasyChat, a React Native app, to the Play Store and App Store.",
             "Shopify Dawn theme plus a private Shopify app.",
             "Shopify Liquid and private-app work sit in the same seat.",
@@ -106,6 +107,7 @@ export const work = [
             "Shopify Dawn",
             "Liquid",
             "Private app",
+            "DevOps",
         ],
     },
     {
@@ -188,7 +190,7 @@ export const skillGroups = [
     },
     {
         id: "commerce",
-        title: "Commerce & backend",
+        title: "Commerce, backend & DevOps",
         kicker: "Platform",
         items: [
             "Shopify / Liquid",
@@ -197,6 +199,8 @@ export const skillGroups = [
             "Node.js",
             "Express",
             "Databases",
+            "DevOps",
+            "Server administration",
             "SEO / CWV",
         ],
     },
@@ -227,7 +231,7 @@ export const skillOrbit = [
     },
     {
         ring: 1,
-        items: ["React Query", "Zustand", "RHF", "Shopify Liquid"],
+        items: ["React Query", "Zustand", "RHF", "Shopify Liquid", "DevOps"],
     },
     {
         ring: 2,
