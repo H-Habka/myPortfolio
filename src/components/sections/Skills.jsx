@@ -22,7 +22,7 @@ const Skills = () => {
             <div className="section-inner">
                 <SectionHeading index={3} kicker="Skills" title="A stack that ships.">
                     Frontend and mobile at the core. Shopify Liquid around commerce.
-                    Agile, SOLID, and OWASP as practice. Arduino, Raspberry Pi, and the daily tools on the outer ring.
+                    DevOps and server administration in the same seat. Agile, SOLID, and OWASP as practice. Arduino, Raspberry Pi, and the daily tools on the outer ring.
                 </SectionHeading>
 
                 <div className="mt-16 grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">
@@ -32,7 +32,7 @@ const Skills = () => {
                         </p>
                         <p className="mt-3 max-w-sm text-sm leading-7 text-muted">
                             Hover or tap a node. Inner ring is the shipping stack. Mid ring is
-                            data and commerce. Outer ring is practice, hardware, and tools.
+                            data, commerce, and DevOps. Outer ring is practice, hardware, and tools.
                         </p>
                         <SkillOrbit />
                     </div>

@@ -68,7 +68,7 @@ const Hero = () => {
                         data-hero="copy"
                         className="mt-4 max-w-xl text-sm leading-7 text-muted sm:text-base"
                     >
-                        Sole engineer at{" "}
+                        Sole engineer and server administrator at{" "}
                         <span className="font-semibold text-cyan">EasySales</span>.
                         Shopify and jewelry photography at{" "}
                         <span className="font-semibold text-cyan">
@@ -146,7 +146,7 @@ const Hero = () => {
                                 Now
                             </p>
                             <p className="mt-1 text-sm font-semibold text-paper">
-                                EasySales · Sole engineer
+                                EasySales · Sole engineer · Server admin
                             </p>
                         </div>
                     </div>

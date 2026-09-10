@@ -96,13 +96,13 @@ function paintDashboard(ctx, w, h) {
     ctx.fillStyle = MUTED;
     ctx.font = "500 15px 'IBM Plex Mono', monospace";
     ctx.fillText("STACK", 568, 278);
-    ["React", "React Native", "Liquid", "Node"].forEach((row, i) => {
-        fillRound(ctx, 568, 300 + i * 36, 196, 28, 8, "rgba(62, 224, 208, 0.08)");
+    ["React", "React Native", "Liquid", "Node", "DevOps"].forEach((row, i) => {
+        fillRound(ctx, 568, 296 + i * 32, 196, 26, 8, "rgba(62, 224, 208, 0.08)");
         ctx.fillStyle = PAPER;
         ctx.font = "500 16px Outfit, sans-serif";
-        ctx.fillText(row, 582, 320 + i * 36);
+        ctx.fillText(row, 582, 314 + i * 32);
         ctx.fillStyle = CYAN;
-        ctx.fillRect(568, 300 + i * 36, 4, 28);
+        ctx.fillRect(568, 296 + i * 32, 4, 26);
     });
 }
 
